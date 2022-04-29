@@ -1,0 +1,24 @@
+{
+  "name": "proyecto_mi_ecommerce_lostriples",
+  "version": "1.0.0",
+  "description": "grupo_3\r .",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axelfischbein/proyecto_mi_ecommerce_lostriples.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axelfischbein/proyecto_mi_ecommerce_lostriples/issues"
+  },
+  "homepage": "https://github.com/axelfischbein/proyecto_mi_ecommerce_lostriples#readme",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
