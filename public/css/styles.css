@@ -1,3 +1,43 @@
-body{
-    background-color: red;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
 }
+:root{
+    --grisClaro: #999999;
+}
+footer{
+    margin-top: 100px; /*temporal*/
+    height: 65px;
+    border-top: 1px solid var(--grisClaro);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--grisClaro);
+}
+    .redesSociales{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .stores-container{
+        display: flex;
+        gap: 15px;
+    }
+        .appstore{
+            display: flex;
+            gap: 8px;
+        }
+        .playstore{
+            width: 125px;
+            display: flex;
+            gap: 8px;
+        }
