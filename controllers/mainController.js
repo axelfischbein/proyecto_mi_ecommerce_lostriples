@@ -21,11 +21,11 @@ const controller = {
     },
     register: (req, res) => {
         
-        return res.send('./pages/register');
+        return res.render('./pages/register',);
     },
     login: (req, res) => {
 
-        return res.send('./pages/login');
+        return res.render('./pages/login',);
     },
 
 }
