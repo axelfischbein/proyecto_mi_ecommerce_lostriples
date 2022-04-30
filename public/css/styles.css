@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:ital,wght@0,400;0,700;1,900&display=swap');
+
+*{
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blanco: white;
+    --grisClaro: #999999;
+    --grisOscuro: #494F51;
+    --Primary: #0CB093;
+    --categories: #333333;
+}
+
+body{
+    background: var(--Primary);
+}
+
+
+.main_container_form{
+    padding: auto;
+    position: absolute;
+    width: 320px;
+    height: 296px;
+    background: var(--blanco);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    
+}
+
+.container_form{
+    justify-content: center;
+    padding: 12px;
+    margin-right: 24px;
+}
+
+h2{
+    display: flex;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    margin-right: 32px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 48px;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form input{
+    background: none;
+    border: none;
+    outline: none;
+    color: inherit;
+    width: 256px;
+    height: 32px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.form button{
+    width: 256px;
+    height: 32px;
+    background: var(--grisOscuro);
+    border-radius: 16px;
+    color: var(--blanco)
+}
+
