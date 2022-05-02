@@ -77,6 +77,11 @@
         align-items: center;
         justify-content: space-evenly;
     }
+
+    .profile:hover{
+        background: var(--Primary);
+        border: 1px solid var(--Primary);
+    }
     
     .cart{
         width: 32px;
@@ -88,9 +93,15 @@
         align-items: center;
         justify-content: center;
     }
+
+    .cart:hover{
+        background: var(--Primary);
+        border: 1px solid var(--Primary);
+    }
     
 #categories{
     margin: 30px 128px;
+    margin-bottom: 54px;
     padding: 16px 40px;
     height: 128px;
     border-radius: 16px;
@@ -117,6 +128,58 @@
             width: 40px;
             height: 40px;
         } 
+
+#productHero_container{
+    width: 100%;
+    height: 256px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    background-color: var(--Primary);
+    position: relative;
+    
+}
+    .productHero{
+        display: flex;
+        position: relative;
+        align-items: flex-end;
+        height: 256px;
+        width: 504px;
+        margin-bottom: 24px;
+    }
+        .productHero_banner{
+            position: absolute;
+            z-index: 0;
+            box-sizing: content-box;
+            border-radius: 0px 0px 16px 16px;
+                      
+        }
+
+        .productHero> div{
+            display: flex;
+            z-index: 1;
+            padding: 8px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+            border-radius: 0px 0px 16px 16px;
+            
+        }
+            .productHero_logo{
+                position: relative;
+                bottom: 0;
+                width: 112px;
+                height: 112px;
+            }
+
+            .productHero> div> div{
+                color: white;
+                display: flex;
+                padding-right: 15%;
+                flex-direction: column;
+                z-index: 1;
+                margin: 8px;
+                font-size: 20px;
+            }
+               
 
 footer{
     margin-top: 100px; /*temporal*/
