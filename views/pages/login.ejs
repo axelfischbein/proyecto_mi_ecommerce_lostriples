@@ -11,9 +11,10 @@
 
 <body>
 
-  <header>
+  <header class="header">
     <img src="images/MiEcommerce.svg" alt="logo" class="logo">
   </header>
+    <div class="separador_login"></div>
 
     <div class="green_container"></div>
 
@@ -28,7 +29,7 @@
           <p>
             <input type="password" name="password" placeholder="Tu contraseña">
           </p>
-          <button class="login_button"> <a href="index">Iniciar Sesión</a></button>
+          <button class="login_button"> <a href="/">Iniciar Sesión</a></button>
         </form>
       </div>
       <!--cierre de la cajita blanca que guarda el formulario-->
@@ -37,6 +38,10 @@
       </div>
 
     </div>
+
+    <footer>
+      <%- include('../partials/footer.ejs')  %> 
+  </footer>
 
 </body>
 

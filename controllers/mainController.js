@@ -28,7 +28,7 @@ const controller = {
     },
     login: (req, res) => {
 
-        return res.renders('./pages/login');
+        return res.render('./pages/login');
     },
 
 }
