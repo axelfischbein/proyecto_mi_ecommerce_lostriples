@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/public/css/styles.css" rel="stylesheet" type="text/css">
+  <title>Registro</title>
+</head>
+
+<body>
+
+  <header>
+    <img src="/public/images/MiEcommerce.svg" alt="logo" class="logo">
+  </header>
+
+    <div class="green_container"></div>
+
+    <div class="vertical_container">
+      <!--cajita blanca que guarda el formulario-->
+      <div class="form_container">
+        <form action="" method="POST" class="form">
+          <h2>¡Hola!</h2>
+          <p>
+            <input type="name" name="user" placeholder="Tu email">
+          </p>
+          <p>
+            <input type="password" name="password" placeholder="Tu nueva contraseña">
+          </p>
+          <p>
+            <input type="password" name="password" placeholder="Repite tu contraseña">
+          </p>
+          <!--IMPORTANTE CHEQUEAR REDIRECCION -->
+          <button class="login_button"> <a href="/views/pages/login.ejs">Crear Cuenta</a></button>
+        </form>
+      </div>
+      <!--cierre de la cajita blanca que guarda el formulario-->
+      <div class="register_link">
+        <p>¿Ya tienes cuenta? <a href="/views/pages/login.ejs" class="registrate"> Inicia Sesión</a></p>
+      </div>
+
+    </div>
+
+</body>
+
+</html>
