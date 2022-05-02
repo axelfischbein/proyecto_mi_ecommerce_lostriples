@@ -97,7 +97,7 @@ p>input{
     border-style: inherit;
     border: 0;
     outline: 0;
-    
+    margin-top: 2px;
 }
 
 .login_button{
