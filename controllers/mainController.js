@@ -24,19 +24,11 @@ const controller = {
     },
     register: (req, res) => {
         
-<<<<<<< HEAD
-        return res.render('./pages/register',);
-    },
-    login: (req, res) => {
-
-        return res.render('./pages/login',);
-=======
         return res.render('./pages/register');
     },
     login: (req, res) => {
 
         return res.renders('./pages/login');
->>>>>>> paginaPrincipal
     },
 
 }
