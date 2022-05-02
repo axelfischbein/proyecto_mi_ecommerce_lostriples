@@ -1,0 +1,40 @@
+.top_container{
+    padding-left: 128px;
+    padding-top: 16px;
+}
+
+.volver{
+    font-size: 16px;
+    margin-right: 20px;
+
+}
+
+.prod_carrito{
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 400;
+}
+
+p img{
+    width: 15.84px;
+    height: 15.84px;
+    margin-right: 7.16px;
+}
+
+.btn_pagar{
+    width: 110px;
+    height: 32px;
+    background: var(--grisOscuro);
+    border-radius: 16px;
+    color: rgb(94%, 94%, 94%);
+    gap: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    border-style: inherit;
+}
+
+.bottom_container{
+    padding-bottom: 248px;
+    padding-right: 128px;
+}
