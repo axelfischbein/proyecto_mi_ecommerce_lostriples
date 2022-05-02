@@ -1,0 +1,15 @@
+<div class="product-list">
+    <% puedeInteresar.forEach(product => { %>
+    
+        <div class="product-card">
+            <div class="product-card-img">
+                <img src=<%= product.src %>  alt=<%= product.alt %>>
+            </div>
+            <div class="product-desc">
+                <h3><%= product.nombre %></h3>
+                <p><%= product.puntos %> <span>puntos</span></p>
+            </div>
+        </div>
+    
+    <% }) %>
+</div>

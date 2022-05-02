@@ -1,0 +1,18 @@
+
+
+<% categories.forEach(categorie => { %>
+    
+    <div class="categorie-item">
+        <img src=<%= categorie.src %> <%= categorie.alt %>>
+        <p><%= categorie.nombre %></p>
+    </div>
+
+    <% if (categorie.nombre != "Otros") { %>
+        <div class="separador"></div>
+    <% } %>
+
+<% }) %>
+
+
+
+
