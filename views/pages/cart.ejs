@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="/css/carrito.css">
     <link rel="stylesheet" href="/css/styles.css">
     <title>Carrito</title>
+
+    <link rel="stylesheet" href="/css/carrito.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <header>
@@ -16,6 +19,10 @@
         <p class="volver"><a href="/"> <img src="images/flechita.svg" alt=""></a>Volver</p>
         <span class="prod_carrito">Productos en tu carrito</span>
     </div>
+
+    <section>
+        <%- include('../partials/cart/cartItem.ejs')  %> 
+    </section>
 
     <div class="bottom_container">
         <p>Total de puntos <b>26.420</b></p>
