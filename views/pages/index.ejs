@@ -11,8 +11,21 @@
     <header>
         <%- include('../partials/header.ejs')  %> 
     </header>
-    
-    <section id="categories">
+    <div class="margin"></div>
+    <section class="categories">
+        <%- include('../partials/categories.ejs')  %>
+    </section>
+
+    <section class="products">
+        <h3>Te puede interesar</h3>
+        <%- include('../partials/products/puedeInteresar.ejs') %>
+    </section>
+    <section class="products">
+        <h3>Los más pedidos</h3>
+        <%- include('../partials/products/masPedidos.ejs') %>
+    </section>
+
+    <section class="categories">
         <%- include('../partials/categories.ejs')  %>
     </section>
 

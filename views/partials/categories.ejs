@@ -1,17 +1,18 @@
-<%- include('./categories/electronics.ejs')  %>
-<span class="separador"></span>
-<%- include('./categories/aliment.ejs')  %>
-<span class="separador"></span>
-<%- include('./categories/drinks.ejs')  %>
-<span class="separador"></span>
-<%- include('./categories/dress.ejs')  %>
-<span class="separador"></span>
-<%- include('./categories/games.ejs')  %>
-<span class="separador"></span>
-<%- include('./categories/automotive.ejs')  %>
-<span class="separador"></span>
-<%- include('./categories/home.ejs')  %>
-<span class="separador"></span>
-<%- include('./categories/others.ejs')  %>
+
+
+<% categories.forEach(categorie => { %>
+    
+    <div class="categorie-item">
+        <img src=<%= categorie.src %> <%= categorie.alt %>>
+        <p><%= categorie.nombre %></p>
+    </div>
+
+    <% if (categorie.nombre != "Otros") { %>
+        <div class="separador"></div>
+    <% } %>
+
+<% }) %>
+
+
 
 
