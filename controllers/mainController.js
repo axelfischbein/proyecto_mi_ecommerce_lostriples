@@ -13,7 +13,7 @@ const controller = {
     },
     products: (req, res) => {
         
-        return res.render('./pages/product',);
+        return res.render('./pages/product', {puedeInteresar, masPedidos, categories});
     },
     cart: (req, res) => {
 
