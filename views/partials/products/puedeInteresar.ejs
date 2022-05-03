@@ -1,7 +1,7 @@
 <div class="product-list">
     <% puedeInteresar.forEach(product => { %>
     
-        <div class="product-card">
+        <a class="product-card" href="/products">
             <div class="product-card-img">
                 <img src=<%= product.src %>  alt=<%= product.alt %>>
             </div>
@@ -9,7 +9,7 @@
                 <h3><%= product.nombre %></h3>
                 <p><%= product.puntos %> <span>puntos</span></p>
             </div>
-        </div>
+        </a>
     
     <% }) %>
 </div>
