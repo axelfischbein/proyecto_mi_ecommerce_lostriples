@@ -21,15 +21,9 @@ body{
     width: 100%;
 }
 
-
 header{
     background-color: #EFEFEF;
 }
-
-/* .separador_login{
-    height: 64px;
-    width: 100%;
-} */
 
 .logo{
     width: 136px;
@@ -160,6 +154,7 @@ p>input{
     justify-content: space-between;
     padding: 16px;
     z-index: 20;
+    border-bottom: 1px solid var(--grisClaro);
 }
 
 .logo{
