@@ -1,0 +1,186 @@
+.container_main{
+    padding-top: 80px;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .top_container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 1024px;
+    }
+
+    .bottom_container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 22px;
+        width: 1024px;
+        padding-bottom: 140px;
+        font-size: 24px;
+        line-height: 33px;
+        margin-top: 26px;
+        margin-right: 16px;
+    }
+
+.volver{
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.prod_carrito{
+    font-size: 24px;  
+}
+
+p img{
+    width: 15.84px;
+    height: 15.84px;
+    margin-right: 7.16px;
+}
+
+span b{
+    padding-left: 20px;
+    margin-right: 5px;
+}
+
+.btn_pagar{
+    padding: 8px 28px;
+    width: 110px;
+    height: 32px;
+    background: var(--grisOscuro);
+    border-radius: 16px;
+    color: rgb(94%, 94%, 94%);
+    gap: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    border-style: inherit;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.btn_pagar:hover{
+    background: var(--Primary);
+    transition: all 300ms ease;
+}
+
+/*Giuly*/
+.product-list{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;    
+    gap: 20px;
+}
+
+.cart_item{
+    width: 1024px;
+    height: 80px;
+    padding-left: 8px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    .cart_item:hover{
+        outline: 2px solid #0CB093;
+    }
+    .cart_desc{
+        min-width: 280px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        display: flex;
+        align-items: center;
+    }
+        .cart_desc img{
+            width: 64px;
+            height: 64px;
+        }
+    .cart_opt{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+        .cart_opt a{
+            width: 78px;
+            height: 32px;
+
+            background-color: #494F51;
+            border-radius: 16px;
+
+            text-decoration: none;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: white;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            
+            .cart_opt a:hover{
+                background-color: #0CB093;
+                font-size: 13px;
+            }
+        .agregar-quitar{
+            margin-left: 16px;
+            margin-right: 26px;
+            width: 80px;
+            height: 32px;
+
+            background-color: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 16px;
+            color: #000000;
+        }
+            .agregar-quitar p{
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+                border-radius: 50px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+                .agregar-quitar p:hover{
+                    color: #0CB093;
+                    font-size: 14px;
+                }
+        .cart_opt > p{
+            width: 78px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 33px;
+            text-align: right;
+            color: #000000;
+        }
