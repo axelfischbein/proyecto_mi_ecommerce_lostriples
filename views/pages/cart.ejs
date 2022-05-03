@@ -6,29 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/carrito.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/MiEcommerce.svg">
     <title>Carrito</title>
-
-    <link rel="stylesheet" href="/css/carrito.css">
-    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <header>
         <%- include('../partials/header.ejs')  %> 
     </header>
+
+   <div class="container_main">
     <div class="top_container">
         <p class="volver"><a href="/"> <img src="images/flechita.svg" alt=""></a>Volver</p>
-        <span class="prod_carrito">Productos en tu carrito</span>
+        <div class="prod_carrito">Productos en tu carrito</div>
     </div>
-
+    
     <section>
         <%- include('../partials/cart/cartItem.ejs')  %> 
     </section>
 
-    <div class="bottom_container">
-        <p>Total de puntos <b>26.420</b></p>
+    <section class="bottom_container">
+        <span>Total de puntos <b>26.420</b></span>
         <button class="btn_pagar">Ir a pagar</button>
-    </div>
+    </section>
 
+   </div>
 
 
     <footer>
