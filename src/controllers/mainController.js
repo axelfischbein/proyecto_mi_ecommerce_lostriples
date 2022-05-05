@@ -15,22 +15,6 @@ const controller = {
         
         return res.render('./pages/product', {puedeInteresar, masPedidos, categories});
     },
-    cart: (req, res) => {
-
-        return res.render('./pages/cart',{cartItems});
-    },
-    checkout: (req, res) => {
-
-        return res.render('./pages/checkout');
-    },
-    register: (req, res) => {
-        
-        return res.render('./pages/register');
-    },
-    login: (req, res) => {
-
-        return res.render('./pages/login');
-    },
 
 }
 

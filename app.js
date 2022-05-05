@@ -1,24 +1,42 @@
+//dependencias
 const express = require('express');
 const app = express();
 const path = require('path');
-PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3030;
+//rutas
+const homeRoutes = require('./src/routes/homeRoutes');
+const userRoutes = require('./src/routes/userRoutes');
+const cartRoutes = require('./src/routes/cartRoutes');
 
-/*importo el js para manejar las rutas*/
-const mainRoutes = require('./routes/mainRoutes');
 
 
-/*Son archivos que pueden ser accedidos de manera publica sin tener que solicitar los mismos desde un request*/
-app.use(express.static(path.join(__dirname,"./public")));
-/*Indicarle que motor de vista usaremos*/
+//config
 app.set('view engine', 'ejs');
-/*indica donde esta las vistas (si se llama views no hace falta)*/
-app.set('views','./views');
-/*indica donde se manejan las rutas*/
-app.use('/', mainRoutes);
+app.set('views','./src/views');
 
-/*para peticiones post*/
+//middlewares
+app.use(express.static(path.join(__dirname,"./public")));
 express().use(express.json());
 express().use(express.urlencoded({ extended: true }));
 
+//rutas
+app.use('/', homeRoutes);
+app.use('/register', userRoutes);
+app.use('/login', userRoutes);
+app.use('/cart', cartRoutes);
+app.use('/checkout', cartRoutes);
 
+
+
+
+
+
+
+//404
+app.use((req,res,next)=>{
+    res.status(404).render('pages/404page');
+    next();
+});
+
+//server
 app.listen(PORT, ()=>{});
