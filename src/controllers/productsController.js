@@ -3,11 +3,12 @@ var categories = [{src:"/images/electronica.svg", alt:"icono de electrónica", n
 var puedeInteresar = [{src:"/images/jackdaniels.svg", alt:"foto jack daniels", nombre: "Wiskey Jack Daniels Honey 750ml", puntos: "19.000"},{src:"/images/productogenerico.svg", alt:"foto producto generico", nombre: "NOMBRE DEL PRODUCTO O SERVICIO", puntos: "XX.XXX"},{src:"/images/productogenerico.svg", alt:"foto producto generico", nombre: "NOMBRE DEL PRODUCTO O SERVICIO", puntos: "XX.XXX"},{src:"/images/productogenerico.svg", alt:"foto producto generico", nombre: "NOMBRE DEL PRODUCTO O SERVICIO", puntos: "XX.XXX"}]
 var masPedidos = [{src:"/images/cocacola.svg", alt:"foto cocacola", nombre: "Coca Cola Lata 220mL Pack Original x8", puntos: "760"},{src:"/images/productogenerico.svg", alt:"foto producto generico", nombre: "NOMBRE DEL PRODUCTO O SERVICIO", puntos: "XX.XXX"},{src:"/images/productogenerico.svg", alt:"foto producto generico", nombre: "NOMBRE DEL PRODUCTO O SERVICIO", puntos: "XX.XXX"},{src:"/images/productogenerico.svg", alt:"foto producto generico", nombre: "NOMBRE DEL PRODUCTO O SERVICIO", puntos: "XX.XXX"},{src:"/images/productogenerico.svg", alt:"foto producto generico", nombre: "NOMBRE DEL PRODUCTO O SERVICIO", puntos: "XX.XXX"},{src:"/images/productogenerico.svg", alt:"foto producto generico", nombre: "NOMBRE DEL PRODUCTO O SERVICIO", puntos: "XX.XXX"},{src:"/images/productogenerico.svg", alt:"foto producto generico", nombre: "NOMBRE DEL PRODUCTO O SERVICIO", puntos: "XX.XXX"},{src:"/images/productogenerico.svg", alt:"foto producto generico", nombre: "NOMBRE DEL PRODUCTO O SERVICIO", puntos: "XX.XXX"}]
 
+/* el objeto controller con cada atributo asociado a una funcion req/res */
 const controller = {
 
-    index: (req, res) => {
+    products: (req, res) => {
         
-        return res.render('./pages/index',{puedeInteresar, masPedidos, categories});
+        return res.render('./pages/product', {puedeInteresar, masPedidos, categories});
     },
 
 }

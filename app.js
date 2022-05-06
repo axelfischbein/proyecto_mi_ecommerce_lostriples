@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3030;
 const homeRoutes = require('./src/routes/homeRoutes');
 const userRoutes = require('./src/routes/userRoutes');
 const cartRoutes = require('./src/routes/cartRoutes');
+const productsRoutes = require('./src/routes/productsRoutes');
 
 
 
@@ -21,14 +22,11 @@ express().use(express.urlencoded({ extended: true }));
 
 //rutas
 app.use('/', homeRoutes);
-app.use('/register', userRoutes);
-app.use('/login', userRoutes);
+app.get('/products', productsRoutes);
 app.use('/cart', cartRoutes);
 app.use('/checkout', cartRoutes);
-
-
-
-
+app.use('/login', userRoutes);
+app.use('/register', userRoutes);  //ERROR
 
 
 
