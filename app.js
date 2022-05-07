@@ -8,6 +8,8 @@ const homeRoutes = require('./src/routes/homeRoutes');
 const userRoutes = require('./src/routes/userRoutes');
 const cartRoutes = require('./src/routes/cartRoutes');
 const productsRoutes = require('./src/routes/productsRoutes');
+const apiRoutes = require('./src/routes/apiRoutes'); //api
+
 
 
 
@@ -17,16 +19,16 @@ app.set('views','./src/views');
 
 //middlewares
 app.use(express.static(path.join(__dirname,"./public")));
-express().use(express.json());
-express().use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //rutas
 app.use('/', homeRoutes);
 app.get('/products', productsRoutes);
-app.use('/cart', cartRoutes);
-app.use('/checkout', cartRoutes);
-app.use('/login', userRoutes);
-app.use('/register', userRoutes);  //ERROR
+app.use('/', cartRoutes);
+app.use('/', userRoutes);
+app.use('/api', apiRoutes);//api
+
 
 
 

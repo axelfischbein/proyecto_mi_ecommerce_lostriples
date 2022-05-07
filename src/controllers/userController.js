@@ -1,5 +1,5 @@
 const {validationResult} = require('express-validator');
-const userdb = require("../../db/userdb.json");
+const fs = require('fs');
 
 const controller = {
 
@@ -7,19 +7,41 @@ const controller = {
 
         return res.render('./pages/register');
     },
-    login: (req, res) => {
 
+    loginPost: (req, res) => {
+
+        const usersdb = JSON.parse(fs.readFileSync('./db/userdb.json','utf-8'));
         const errors = validationResult(req);
-        console.log(errors);
 
         if(errors.isEmpty()){
 
-            res.send('logeado');
+            const {user, pass} = req.body;
+            var estaRegistrado = false;
+
+            usersdb.forEach(userdb => {
+
+                if(userdb.user == user.trim() && userdb.pass == pass.trim() ){
+                    estaRegistrado = true;
+                }
+                
+            });
+
+            if(estaRegistrado){
+                res.redirect('/');
+            }else{
+                res.render('./pages/login', {errors: [], estaRegistrado});
+            }
+
         }else{
 
-            res.render('login', {errors:errors.array(),});
+            res.render('./pages/login', {errors:errors.array(), estaRegistrado: null});
         }
 
+    },
+    loginGet: (req, res) => {
+
+        res.render('./pages/login', {errors: [], estaRegistrado: null});
+        
     },
 
 }
