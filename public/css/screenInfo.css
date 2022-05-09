@@ -1,0 +1,10 @@
+.warning{
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(255, 203, 203);
+
+    color: red;
+}

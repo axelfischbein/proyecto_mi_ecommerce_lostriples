@@ -2,9 +2,9 @@
 const express = require('express');
 const router = express.Router();
 //controllers
-const {index} = require('../controllers/homeController');
+const {products} = require('../controllers/productsController');
 
 //rutas
-router.get('/', index);
+router.get('/', products);
 
 module.exports = router;

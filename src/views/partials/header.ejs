@@ -5,7 +5,12 @@
         <%- include('./header/search.ejs')  %> 
         <div class="user">
             <%- include('./header/cart.ejs')  %> 
-            <%- include('./header/profile.ejs')  %>   
+            <% if (true) { %>
+                <%- include('./header/profile.ejs')  %>
+            <% } else { %>
+                <%- include('./header/profileLogin.ejs')  %>
+            <% } %> 
+             
         </div>
     
 </div>
