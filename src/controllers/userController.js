@@ -3,11 +3,6 @@ const fs = require('fs');
 
 const controller = {
 
-    register: (req, res) => {
-
-        return res.render('./pages/register');
-    },
-
     loginPost: (req, res) => {
 
         const usersdb = JSON.parse(fs.readFileSync('./db/userdb.json','utf-8'));
@@ -15,12 +10,13 @@ const controller = {
 
         if(errors.isEmpty()){
 
-            const {user, pass} = req.body;
+            const {email, password} = req.body;
             var estaRegistrado = false;
+
 
             usersdb.forEach(userdb => {
 
-                if(userdb.user == user.trim() && userdb.pass == pass.trim() ){
+                if(userdb.email == email && userdb.password == password ){
                     estaRegistrado = true;
                 }
                 
@@ -38,13 +34,49 @@ const controller = {
         }
 
     },
+    
     loginGet: (req, res) => {
 
         res.render('./pages/login', {errors: [], estaRegistrado: null});
+    },
+
+
+    registerGet: (req, res) => {
         
+        return res.render('./pages/register', {okMsg:'', errors: []});
+    },
+
+
+    registerPost: (req, res) => {
+
+        const errors = validationResult(req);
+        const users = JSON.parse(fs.readFileSync("./db/userdb.json", 'utf-8'));
+        const okMsg = ('Cuenta creada correctamente');
+        if(errors.isEmpty()){
+
+            const {firstName, lastName, email, password} = req.body;
+            let newUser= {
+                id: new Date,
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                password: password,
+                profilePicture:'',
+                deleted: false,
+            }
+
+            users.push(newUser);
+            
+            fs.writeFileSync("./db/userdb.json",JSON.stringify(users));
+
+
+            res.render('./pages/register',{okMsg: okMsg, errors:[]});
+
+        }else{
+            res.render('./pages/register',  {okMsg: '' , errors: errors.array()})
+        }
+     
     },
 
 }
-
-
 module.exports = controller;

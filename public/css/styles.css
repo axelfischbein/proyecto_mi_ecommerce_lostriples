@@ -93,6 +93,7 @@ p>input{
     border: 0;
     outline: 0;
     margin-top: 2px;
+    width: 90%;
 }
 
 .login_button{

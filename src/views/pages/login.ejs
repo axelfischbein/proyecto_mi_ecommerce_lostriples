@@ -13,7 +13,35 @@
 
 <body>
 
-    <ul class="warning">
+  
+  <header class="header">
+    <img src="images/MiEcommerce.svg" alt="logo" class="logo">
+  </header>
+  
+  <div class="green_container"></div>
+  
+  <div class="vertical_container">
+    <!--cajita blanca que guarda el formulario-->
+    <div class="form_container">
+      <form action="/login" method="post" class="form">
+        <h2>¡Hola!</h2>
+        <p>
+            <input type="name" name="email" placeholder="Tu email" autocomplete="off">
+          </p>
+          <p>
+            <input type="password" name="password" placeholder="Tu contraseña">
+          </p>
+          <button class="login_button">Iniciar Sesión</button>
+        </form>
+      </div>
+      <!--cierre de la cajita blanca que guarda el formulario-->
+      <div class="register_link">
+        <p>¿No tienes cuenta? <a href="register" class="registrate"> Registrate</a></p>
+      </div>
+      
+    </div>
+    
+    <ul class="warning fail">
       <% errors.forEach(error => { %>
           <li> <h3><%= error.msg %></h3> </li>
       <% }) %>
@@ -23,37 +51,10 @@
           <p>Usuario o contraseña incorrecta</p>
       <% } %>
     </h3>
-
-  <header class="header">
-    <img src="images/MiEcommerce.svg" alt="logo" class="logo">
-  </header>
-
-    <div class="green_container"></div>
-
-    <div class="vertical_container">
-      <!--cajita blanca que guarda el formulario-->
-      <div class="form_container">
-        <form action="/login" method="post" class="form">
-          <h2>¡Hola!</h2>
-          <p>
-            <input type="name" name="user" placeholder="Tu nombre de usuario" autocomplete="off">
-          </p>
-          <p>
-            <input type="password" name="pass" placeholder="Tu contraseña">
-          </p>
-          <button class="login_button">Iniciar Sesión</button>
-        </form>
-      </div>
-      <!--cierre de la cajita blanca que guarda el formulario-->
-      <div class="register_link">
-        <p>¿No tienes cuenta? <a href="register" class="registrate"> Registrate</a></p>
-      </div>
-
-    </div>
-
+    
     <footer>
       <%- include('../partials/footer.ejs')  %> 
-  </footer>
+    </footer>
 
 </body>
 
