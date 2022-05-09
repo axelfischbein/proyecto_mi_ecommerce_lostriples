@@ -1,11 +1,23 @@
-var categories = [{src:"/images/electronica.svg", alt:"icono de electrónica", nombre: "Electrónica"},{src:"/images/alimentos.svg", alt:"icono de alimentos", nombre: "Alimentos"}, {src:"/images/bebidas.svg", alt:"icono de bebidas", nombre: "Bebidas"}, {src:"/images/indumentaria.svg", alt:"icono de indumentaria", nombre: "Indumentaria"},{src:"/images/juegos.svg", alt:"icono de juegos", nombre: "Juegos"},{src:"/images/automotor.svg", alt:"icono de automóvil", nombre: "Automotor"},{src:"/images/hogar.svg", alt:"icono de hogar", nombre: "Hogar"},{src:"/images/otros.svg", alt:"icono de otros", nombre: "Otros"}]
-
-const {puedeInteresar, masPedidos} = require("../../db/productsdb.json");
+const fetch = require('node-fetch');
+const urlBase = 'http://localhost:3030/api';
 
 const controller = {
 
-    index: (req, res) => {
-        return res.render('./pages/index',{puedeInteresar, masPedidos, categories});
+    index: async (req, res) => {
+
+        try {
+            const responseSuggested = await fetch(`${urlBase}/suggested/4`);
+            const suggested = await responseSuggested.json();
+            const responseMostWanted = await fetch(`${urlBase}/mostmostWanted/8`);
+            const mostWanted = await responseMostWanted.json();
+            const responseCategories = await fetch(`${urlBase}/categories`);
+            const categories = await responseCategories.json();
+
+            return res.render('./pages/index',{suggested, mostWanted, categories});
+
+        } catch (error) {
+            console.log(error);
+        }
     },
 
 }

@@ -1,84 +1,45 @@
 {
+    "categories":
+        [
+            {"src":"/images/electronica.svg", "alt":"icono de electrónica", "nombre": "Electrónica"},
+            {"src":"/images/alimentos.svg", "alt":"icono de alimentos", "nombre": "Alimentos"}, 
+            {"src":"/images/bebidas.svg", "alt":"icono de bebidas", "nombre": "Bebidas"}, 
+            {"src":"/images/indumentaria.svg", "alt":"icono de indumentaria", "nombre": "Indumentaria"},
+            {"src":"/images/juegos.svg", "alt":"icono de juegos", "nombre": "Juegos"},
+            {"src":"/images/automotor.svg", "alt":"icono de automóvil", "nombre": "Automotor"},
+            {"src":"/images/hogar.svg", "alt":"icono de hogar", "nombre": "Hogar"},
+            {"src":"/images/otros.svg", "alt":"icono de otros", "nombre": "Otros"}
+        ],
     "puedeInteresar": 
         [
-            {   
-                "nombre": "Wiskey Jack Daniels Honey 750ml", 
-                "src":"/images/jackdaniels.svg", 
-                "alt":"foto jack daniels", 
-                "puntos": "19.000"
-            },
-            {
-                "src":"/images/productogenerico.svg", 
-                "alt":"foto producto generico", 
-                "nombre": "NOMBRE DEL PRODUCTO O SERVICIO", 
-                "puntos": "XX.XXX"
-            },
-            {
-                "src":"/images/productogenerico.svg", 
-                "alt":"foto producto generico", "nombre": "NOMBRE DEL PRODUCTO O SERVICIO", 
-                "puntos": "XX.XXX"
-            },
-            {
-                "src":"/images/productogenerico.svg", 
-                "alt":"foto producto generico", 
-                "nombre": "NOMBRE DEL PRODUCTO O SERVICIO", 
-                "puntos": "XX.XXX"
-            }
+            
         ],
 
     "masPedidos": 
         [
-            {
-                "src":"/images/cocacola.svg", 
-                "alt":"foto cocacola", 
-                "nombre": "Coca Cola Lata 220mL Pack Original x8", 
-                "puntos": "760"
-            },
-            {
-                "src":"/images/productogenerico.svg", 
-                "alt":"foto producto generico", 
-                "nombre": "NOMBRE DEL PRODUCTO O SERVICIO", 
-                "puntos": "XX.XXX"
-            },
-            {
-                "src":"/images/productogenerico.svg", 
-                "alt":"foto producto generico", 
-                "nombre": "NOMBRE DEL PRODUCTO O SERVICIO", 
-                "puntos": "XX.XXX"
-            },
-            {
-                "src":"/images/productogenerico.svg", 
-                "alt":"foto producto generico", 
-                "nombre": "NOMBRE DEL PRODUCTO O SERVICIO", 
-                "puntos": "XX.XXX"
-            },
-            {
-                "src":"/images/productogenerico.svg", 
-                "alt":"foto producto generico", 
-                "nombre": "NOMBRE DEL PRODUCTO O SERVICIO", 
-                "puntos": "XX.XXX"
-            },
-            {
-                "src":"/images/productogenerico.svg", 
-                "alt":"foto producto generico", 
-                "nombre": "NOMBRE DEL PRODUCTO O SERVICIO", 
-                "puntos": "XX.XXX"
-            },
-            {
-                "src":"/images/productogenerico.svg", 
-                "alt":"foto producto generico", 
-                "nombre": "NOMBRE DEL PRODUCTO O SERVICIO", 
-                "puntos": "XX.XXX"
-            },
-            {
-                "src":"/images/productogenerico.svg", 
-                "alt":"foto producto generico", 
-                "nombre": "NOMBRE DEL PRODUCTO O SERVICIO", 
-                "puntos": "XX.XXX"
-            }
+            
         ],
     "productos":
         [
+            {
+                "_id": "61a5b43231c8b5c118d108613",
+                "category": "Otros",
+                "nombre": "NOMBRE DEL PRODUCTO O SERVICIO",
+                "description": "producto generico",
+                "src":"/images/productogenerico.svg",
+                "alt":"foto producto generico", 
+                "puntos": "XX.XXX",
+
+                "mostwanted": false,
+                "suggested": false,
+                
+                "stock": 0,
+                "store": null,
+                "__v": 0
+            },
+
+
+
             {
                 "_id": "6191cb5ec654f145d4326b85",
                 "category": "Alimentos",
@@ -88,7 +49,10 @@
                 "alt": "foto Alfajores Cacao",
                 "puntos": 15250,
                 "gallery": [],
+
                 "mostwanted": false,
+                "suggested": false,
+
                 "stock": 0,
                 "store": null,
                 "__v": 0
@@ -102,7 +66,10 @@
                 "alt": "foto Alfajores Chocolate",
                 "puntos": 16000,
                 "gallery": [],
+
                 "mostwanted": false,
+                "suggested": false,
+
                 "stock": 0,
                 "store": null,
                 "__v": 0
@@ -116,7 +83,10 @@
                 "alt": "foto Chromecast",
                 "puntos": 56900,
                 "gallery": [],
-                "mostwanted": true,
+
+                "mostwanted": false,
+                "suggested": false,
+
                 "stock": 0,
                 "store": null,
                 "__v": 0
@@ -130,7 +100,10 @@
                 "alt": "foto Xiaomi Redmi Airdots",
                 "puntos": 38490,
                 "gallery": [],
-                "mostwanted": true,
+
+                "mostwanted": false,
+                "suggested": false,
+
                 "stock": 0,
                 "store": null,
                 "__v": 0
@@ -144,7 +117,10 @@
                 "alt": "foto kit teclado mouse",
                 "puntos": 11700,
                 "gallery": [],
-                "mostwanted": true,
+
+                "mostwanted": false,
+                "suggested": false,
+
                 "stock": 0,
                 "store": null
             },
@@ -157,7 +133,10 @@
                 "alt": "foto champagne",
                 "puntos": 98543,
                 "gallery": [],
+
                 "mostwanted": false,
+                "suggested": false,
+
                 "stock": 0,
                 "store": null
             },
@@ -174,7 +153,10 @@
                         "https://http2.mlstatic.com/D_NQ_NP_910441-MLA40997962116_032020-O.webp",
                         "https://http2.mlstatic.com/D_NQ_NP_913638-MLA40997962180_032020-O.webp"
                     ],
-                "mostwanted": true,
+
+                "mostwanted": false,
+                "suggested": false,
+
                 "stock": 0,
                 "store": null
             },
@@ -192,7 +174,10 @@
                         "https://http2.mlstatic.com/D_NQ_NP_701375-MLA46165064140_052021-O.webp",
                         "https://http2.mlstatic.com/D_NQ_NP_2X_696269-MLA46165064141_052021-F.webp"
                     ],
+
                 "mostwanted": false,
+                "suggested": false,
+
                 "stock": 0,
                 "store": "61a42ba51648966e9473df6f",
                 "__v": 0
@@ -209,21 +194,46 @@
                     [
                         "https://http2.mlstatic.com/D_NQ_NP_2X_696269-MLA46165064141_052021-F.webp"
                     ],
-                "mostwanted": true,
+
+                "mostwanted": false,
+                "suggested": false,
+
                 "stock": 0,
                 "store": "61a42ba51648966e9473df6f",
                 "__v": 0
             },
-            {
-                "_id": "61a5b43231c8b5c118d10861",
-                "category": null,
-                "nombre": "New Product - v2",
-                "description": "Edited",
-                "src": null,
-                "alt": " null ",
-                "puntos": 999,
-                "gallery": [],
+
+
+
+
+            {   
+                "_id": "61a5b43231c8b5c118d108611",
+                "category": "Bebidas",
+                "nombre": "Wiskey Jack Daniels Honey 750ml",
+                "description": "Un verdaderamente fabuloso licor de whisky Jack Daniels. Está hecho con una mezcla de ricas especias y suave, miel tersa y el resultado es delicioso sobre hielo o café.  Aroma de caramelo y roble carbonizado, un poco de flor de naranja, miel de manuka y vainilla. Boca: grueso y cremoso, con notas de vainilla, roble tostado, miel de nuevo, un poco de albaricoque también. Acabado: De buena longitud - redondeado y rico. No incluye vasos, la foto es sólo ilustrativa",
+                "src":"/images/jackdaniels.svg", 
+                "alt":"foto jack daniels", 
+                "puntos": "19.000",
+
                 "mostwanted": false,
+                "suggested": true,
+
+                "stock": 0,
+                "store": null,
+                "__v": 0
+            },
+            {
+                "_id": "61a5b43231c8b5c118d108612",
+                "category": "Bebidas",
+                "nombre": "Coca Cola Lata 220mL Pack Original x8",
+                "description": "Coca-Cola es la bebida más vendida en la historia desde 1886. Es la marca más famosa del mundo. Bien fría, hace disfrutar cada instante de la vida ya que añade magia a cada momento.",
+                "src":"/images/cocacola.svg", 
+                "alt":"foto cocacola", 
+                "puntos": "760",
+                
+                "mostwanted": true,
+                "suggested": false,
+
                 "stock": 0,
                 "store": null,
                 "__v": 0

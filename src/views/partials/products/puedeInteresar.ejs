@@ -1,7 +1,7 @@
 <div class="product-list">
-    <% puedeInteresar.forEach(product => { %>
+    <% suggested.forEach(product => { %>
     
-        <a class="product-card" href="/products">
+        <a class="product-card" href=<%= `/products/detail/${product._id}` %> >
             <div class="product-card-img">
                 <img src=<%= product.src %>  alt=<%= product.alt %>>
             </div>

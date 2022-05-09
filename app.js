@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //rutas
 app.use('/', homeRoutes);
-app.get('/products', productsRoutes);
+app.use('/products', productsRoutes);
 app.use('/', cartRoutes);
 app.use('/', userRoutes);
 app.use('/api', apiRoutes);//api
