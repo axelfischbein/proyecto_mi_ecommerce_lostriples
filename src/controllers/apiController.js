@@ -1,10 +1,17 @@
 const productsdb = require("../../db/productsdb.json");
+const products = productsdb.productos;
 const controller = {
 
-    getAllProducts: (req, res) => {
-
+    getProducts: (req, res) => {
+        const {_id} = req.params;
         
-        return res.send(productsdb.productos);
+        products.forEach(product => {
+            if(product._id == _id) {
+                return res.send(product);
+            }
+        });
+        
+        
     },
     getCategories: (req,res) => {
 
@@ -14,7 +21,6 @@ const controller = {
 
         
         const mostWanted = [];
-        const products = productsdb.productos;
         const {id} = req.params;
 
         let idaux = id || products.length;
@@ -37,7 +43,6 @@ const controller = {
     getSuggested: (req, res) => {
 
         const suggested = [];
-        const products = productsdb.productos;
         const {id} = req.params;
 
         let idaux = id || products.length;
