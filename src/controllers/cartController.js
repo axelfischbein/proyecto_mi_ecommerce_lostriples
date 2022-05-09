@@ -1,11 +1,25 @@
-
-var cartItems = [{src:"images/jackdaniels_cartitem.svg", alt:"icono jack daniels", name:"Jack Daniel's Tennessee Honey Botella 750 mL", price:"19.900", cant: 1,},{src:"images/hamburguesa_cartitem.svg", alt:"icono combo hamburguesa", name:"1 Combo Hamburguesa", price:"5.000",cant: 1,},{src:"images/cocacola_cartitem.svg", alt:"icono coca cola", name:"Coca Cola Lata 220mL Pack Original x8", price:"1.520", cant: 2,}]
+const fetch = require('node-fetch');
+const urlBase = 'http://localhost:3030/api';
 
 const controller = {
 
-    cart: (req, res) => {
+    cart: async(req, res) => {
 
-        return res.render('./pages/cart',{cartItems});
+        try {
+            const responseSuggested = await fetch(`${urlBase}/suggested/4`);
+            const suggested = await responseSuggested.json();
+            const responseMostWanted = await fetch(`${urlBase}/mostmostWanted/8`);
+            const mostWanted = await responseMostWanted.json();
+            const responseCategories = await fetch(`${urlBase}/categories`);
+            const categories = await responseCategories.json();
+            const responseCartdb = await fetch(`${urlBase}/cart`);
+            const cartdb = await responseCartdb.json();
+
+            return res.render('./pages/cart',{suggested, mostWanted, categories, cartdb});
+
+        } catch (error) {
+            console.log(error);
+        }
     },
     checkout: (req, res) => {
 

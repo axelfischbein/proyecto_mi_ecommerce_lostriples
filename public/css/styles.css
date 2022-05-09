@@ -636,6 +636,7 @@ footer{
 
                 background: var(--grisOscuro);
                 border-radius: 16px;
+                cursor: pointer;
             }  
             
             .add_button:hover{
