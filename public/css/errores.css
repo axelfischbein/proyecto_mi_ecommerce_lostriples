@@ -1,0 +1,64 @@
+.main_container_error{
+    margin-right: auto; 
+    display: flex;
+    background: #EFEFEF;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    min-width: 1000px;
+}
+
+.container_dos{
+    display: flex;
+    align-items: center;
+    margin-top: 13vh;
+    margin-left: 20%;
+    margin-right: 20%;
+    gap: 20px;
+    background-color: rgb(192, 74, 80);
+    border-radius: 16px;
+    padding: 80px;
+}
+
+.error_container{
+        display: flex;
+        flex-direction: column;
+        background: var(--blanco);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 16px;
+        padding: 20px;;
+        min-height: 200px;
+        width: 100%;
+        height: fit-content;
+}
+
+.sad_face{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    
+}
+
+        .btn_index{
+            display: flex;
+            color:#EFEFEF;
+            padding: 15px;
+            background: var(--Primary);
+            border-radius: 16px;
+            margin-top: 20px;;
+            width: fit-content;
+            border-style: inherit;
+            cursor: pointer;
+            transition: all 300ms ease;
+        }
+
+                .btn_index:hover{
+                    background: var(--grisOscuro);
+                    transition: all 300ms ease;
+                }
+
+                    .inicio{
+                        text-decoration: none;
+                        color: #EFEFEF;
+                        font-size: 125%;
+                    }

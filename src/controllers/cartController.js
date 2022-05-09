@@ -9,7 +9,7 @@ const controller = {
     },
     checkout: (req, res) => {
 
-        return res.render('./pages/checkout');
+        return res.status(501).render('pages/501page');
     },
 
 }
