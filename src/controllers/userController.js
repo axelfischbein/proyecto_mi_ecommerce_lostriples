@@ -5,7 +5,7 @@ const controller = {
 
     registerGet: (req, res) => {
         
-        return res.render('./pages/register', {errors: []});
+        return res.render('./pages/register', {okMsg:'', errors: []});
     },
 
     login: (req, res) => {
@@ -17,11 +17,10 @@ const controller = {
 
         const errors = validationResult(req);
         const users = JSON.parse(fs.readFileSync("./db/userdb.json", 'utf-8'));
-        
+        const okMsg = ('Cuenta creada correctamente');
         if(errors.isEmpty()){
 
             const {firstName, lastName, email, password} = req.body;
-            
             let newUser= {
                 id: new Date,
                 firstName: firstName,
@@ -29,7 +28,7 @@ const controller = {
                 email: email,
                 password: password,
                 profilePicture:'',
-                // deleted: false,
+                deleted: false,
             }
 
             users.push(newUser);
@@ -37,10 +36,10 @@ const controller = {
             fs.writeFileSync("./db/userdb.json",JSON.stringify(users));
 
 
-            res.send('Registrado!!');
+            res.render('./pages/register',{okMsg: okMsg, errors:[]});
 
         }else{
-            res.render('./pages/register',  {errors: errors.array()})
+            res.render('./pages/register',  {okMsg: '' , errors: errors.array()})
         }
      
     },

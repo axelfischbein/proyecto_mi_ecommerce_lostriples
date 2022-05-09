@@ -15,13 +15,16 @@ module.exports = [
             return true;
         }),
     body('password').trim()
-        .notEmpty().withMessage('El password es requerido')
-        .isStrongPassword().withMessage('El password debe contener un caracter en mayuscula, uno en minuscula, un numero y un caracter especial')
-        .isLength({ min: 8 }).withMessage('Debe contener al menos 8 caracteres'),
+    .notEmpty().withMessage('El password es requerido')
+    .isStrongPassword().withMessage('El password debe contener un caracter en mayuscula, uno en minuscula, un numero y un caracter especial')
+    .not().contains('password').withMessage('El password no debe contener la palabra password')
+    .isLength({ min: 8 }).withMessage('Debe contener al menos 8 caracteres'),
     body('password-2').trim().custom((value, { req }) => {
         if (value !== req.body.password) {
-          throw new Error('Password confirmation does not match password');
+          throw new Error('La contraseña debe ser igual a la confirmacion');
         }
         return true;
     }),
 ]
+
+

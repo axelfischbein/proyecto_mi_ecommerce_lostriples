@@ -52,12 +52,13 @@
     
     </div>
     <ul>
-        <% errors.forEach(error => { %>
-            <li>
-                <%= error.msg %> 
-            </li>
-        <% }) %>
-      </ul>
+      <% errors.forEach(error => { %>
+          <li>
+              <h3><%= error.msg %> </h3>
+          </li>
+      <% }) %>
+      <h3><%= okMsg %> </h3>
+    </ul>
       
       
 
