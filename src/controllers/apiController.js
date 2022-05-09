@@ -1,4 +1,4 @@
-const productsdb = require("../../db/products.json")
+const productsdb = require("../../db/productsdb.json");
 const controller = {
 
     getAllProducts: (req, res) => {
