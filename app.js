@@ -21,10 +21,9 @@ express().use(express.urlencoded({ extended: true }));
 
 //rutas
 app.use('/', homeRoutes);
-app.use('/register', userRoutes);
-app.use('/login', userRoutes);
-app.use('/cart', cartRoutes);
-app.use('/checkout', cartRoutes);
+app.use('/', userRoutes);
+app.use('/', cartRoutes);
+
 
 
 

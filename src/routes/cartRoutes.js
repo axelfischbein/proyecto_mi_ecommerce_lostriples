@@ -5,8 +5,8 @@ const router = express.Router();
 const {cart, checkout} = require('../controllers/cartController');
 
 //rutas
-router.get('/', cart);
-router.get('/', checkout);
+router.get('/cart', cart);
+router.get('/checkout', checkout);
 
 
 module.exports = router;
