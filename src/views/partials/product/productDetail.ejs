@@ -7,9 +7,16 @@
 
     <div class="Product_detail">
         <div class="gallery">
-            <img class="img_gallery" src="/images/jackdaniels.svg" alt="jackdaniels">
-            <img class="img_gallery" src="/images/jackdaniels_2.svg" alt="jackdaniels_2">
-            <img class="img_gallery" src="/images/jackdaniels_3.svg" alt="jackdaniels_3">
+            <% for( let i = 0; i < 3; i++ ) { %>
+                <% if (product.gallery.length > i) { %>
+                    <img class="img_gallery" src=<%= product.gallery[i] %>  alt=<%= product.alt %> >
+                <% } %>
+                <% if (product.gallery.length <= i) { %>
+                    <img class="img_gallery" src="/images/productogenerico.svg" alt=<%= product.alt %> >
+                <% } %>
+                    
+            <% } %>
+             
         </div>
         <div class="img_detail">
             <img src=<%=  product.src  %>   alt= <%=  product.alt  %> >
