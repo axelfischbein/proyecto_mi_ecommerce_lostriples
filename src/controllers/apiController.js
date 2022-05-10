@@ -15,29 +15,26 @@ const controller = {
 
         const {_id} = req.params;
 
-        let newCartItems = [];
         let oldCartItems = cartItems;
         let newCartdb = cartdb;
 
-        let estaEnElCarrito = false;
+        let lastItem = false;
         oldCartItems.forEach(cartProduct => {
             if(cartProduct._id == _id && cartProduct.cant>1) {
-                estaEnElCarrito = true;
+                lastItem = true;
                 cartProduct.cant--;
                 newCartdb.totalPrice -= Number(cartProduct.price);
                 newCartdb.cartItems = oldCartItems;
             }
-        });
-
-        if(estaEnElCarrito == false){
-            cartItems.forEach(cartProduct => {
-                if(cartProduct._id != _id) {
+            if(lastItem == false){
+                if(cartProduct.cant == 1){
+                    newCartdb.cartItems = newCartdb.cartItems.filter(cartProduct => cartProduct._id != _id);
                     newCartdb.totalPrice -= Number(cartProduct.price);
-                    newCartItems.push(cartProduct);
                 }
-            });
-            newCartdb.cartItems = newCartItems;
-        }
+            }
+        });
+        
+
         
         fs.writeFileSync("./db/cartdb.json",JSON.stringify(newCartdb));
         
@@ -60,20 +57,15 @@ const controller = {
         });
 
         if(estaEnElCarrito == false){
-            let src,alt,name,price,cant;
 
             products.forEach(product => {
                 if(product._id == _id) {
-                    src = product.src;
-                    alt = product.alt;
-                    name = product.nombre;
-                    price = product.puntos;
-                    cant = 1;
+                    let {src, alt, nombre, puntos} = product;
 
                     newCartItems.push(
-                        {"_id": _id, "src":src, "alt":alt, "name":name, "price":price, "cant": 1}
+                        {"_id": _id, "src":src, "alt":alt, "name":nombre, "price":puntos, "cant": 1}
                     );
-                    newCartdb.totalPrice += Number(price);
+                    newCartdb.totalPrice += Number(puntos);
                     newCartdb.cartItems = newCartItems;
                 }
             });
