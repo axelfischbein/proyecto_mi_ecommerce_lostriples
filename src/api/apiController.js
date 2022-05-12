@@ -12,7 +12,6 @@ const controller = {
         return res.send(cartdb);
     },
     quitarProductoDelCarrito: (req,res)=>{
-
         const {_id} = req.params;
 
         let oldCartItems = cartItems;
