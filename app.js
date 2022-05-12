@@ -9,7 +9,7 @@ const homeRoutes = require('./src/routes/homeRoutes');
 const userRoutes = require('./src/routes/userRoutes');
 const cartRoutes = require('./src/routes/cartRoutes');
 const productsRoutes = require('./src/routes/productsRoutes');
-const apiRoutes = require('./src/routes/apiRoutes'); //api
+const apiRoutes = require('./src/api/apiRoutes'); //api
 
 
 //config

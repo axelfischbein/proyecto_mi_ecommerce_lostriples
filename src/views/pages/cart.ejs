@@ -10,6 +10,11 @@
     <title>Carrito</title>
 </head>
 <body>
+    <% let totalPrice = 0 %> 
+    <% cartdb.cartItems.forEach(item => { %>
+        <% totalPrice += item.price  %>
+    <% }) %>
+
     <header>
         <%- include('../partials/header.ejs')  %> 
     </header>
@@ -26,7 +31,7 @@
         </section>
 
         <section class="bottom_container">
-            <span>Total de puntos: <b><%= cartdb.totalPrice %> </b></span>
+            <span>Total de puntos: <b> <%= totalPrice %>  </b></span>
             <button class="btn_pagar">Ir a pagar</button>
         </section>
 
