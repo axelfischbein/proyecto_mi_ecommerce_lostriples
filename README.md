@@ -8,7 +8,7 @@ Se nos solicita crear la próxima versión de MiEcommerce (el e-commerce y club 
 
 ## Tecnologías ##
 - **ejs:** _versión 3.1.7_
-- **express:**: _versión 4.18.0_
+- **express:** _versión 4.18.0_
 - **express-validator:** _versión 6.14.0_
 - **node-fetch:** _versión 2.6.7_
 - **nodemon:** _versión 2.0.16_
