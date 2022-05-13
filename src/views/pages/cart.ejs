@@ -13,7 +13,7 @@
 <body>
     <% let totalPrice = 0 %> 
     <% cartdb.cartItems.forEach(item => { %>
-        <% totalPrice += item.price  %>
+        <% totalPrice += (item.price * item.cant) %>
     <% }) %>
 
     <header>
