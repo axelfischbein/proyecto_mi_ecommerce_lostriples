@@ -26,8 +26,6 @@
         align-items: center;
     }
 
-
-
     .search{
         width: 896px;
         min-width: 100px;
@@ -288,6 +286,9 @@
     justify-content: space-evenly;
     background-color: var(--Primary);
     position: relative;
+
+
+    display: none;
 }
     .productHero{
         display: flex;
@@ -336,7 +337,7 @@
 
 footer{
     margin-top: 48px;
-    height: 65px;
+    padding: 23px 55px;
     border-top: 1px solid var(--grisClaro);
     display: flex;
     justify-content: space-around;
@@ -357,7 +358,6 @@ footer{
         align-items: center;
         gap: 25px;
     }
-    
     .stores-container{
         display: flex;
         gap: 15px;
@@ -397,5 +397,13 @@ footer{
     .profile p{
         display: none;
     }
-           
+    
+    footer{
+        padding: 23px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+        .copyright{
+            order: -1;
+        }
 }
