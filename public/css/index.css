@@ -496,4 +496,19 @@ footer{
                                 border-left: none;
                                 height: fit-content;
                             }
+    
+        .miniprofile{
+            height: 100vh;
+            top: 0;
+            border-radius: 16px 0px 0px 16px;
+            right: 0;
+            justify-content: flex-start;
+        }
+        .miniprofile > .profile{
+            margin-left: 30px;
+        }
+        .miniprofile > .profile p{
+            margin-left: 10px;
+            display: flex;
+        }
 }
