@@ -3,7 +3,7 @@ header{
     background-color: #EFEFEF;
 }
 
-.logo{
+.logo_login{
     width: 136px;
     height: 32px;
     margin-left: 16px;
@@ -13,18 +13,16 @@ header{
 .login_container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     position: relative;
 }
 
 .vertical_container{
     display: flex;
-    top: 112px;
     box-sizing: content-box;
     flex-direction: column;
-    position: absolute;
-    justify-content: center;
+    position: relative;
     align-self: center;
+    bottom: 152px;
 }
 
 .green_container{
@@ -32,8 +30,8 @@ header{
     background: var(--Primary);
     top: 64px;
     height: 264px;
-    margin-bottom: 408px;
     width: 100%;
+    
 }
 
 .form_container{
@@ -126,16 +124,4 @@ p>input{
 
 .registrate{
     color:black;
-}
-
-@media (max-width: 700px){
-    .green_container{
-        margin-bottom: 380px;
-    }
-}
-
-@media (max-width: 414px){
-    .green_container{
-        margin-bottom: 350px;
-    }
 }
