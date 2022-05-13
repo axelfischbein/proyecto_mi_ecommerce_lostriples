@@ -1,11 +1,16 @@
 <div class="product_detail_container">
+    
     <div class="product_links">
         <img src="/images/Vector.svg" alt="vector">
         <a href="/">Volver al listado </a>
-        <p> Alimentos</p>
+        <p>> Alimentos</p>
     </div>
 
     <div class="Product_detail">
+        <div class="detail_container_mobile">
+            <h3> <%=  product.nombre  %> </h3>
+        </div>
+
         <div class="gallery">
             <% for( let i = 0; i < 3; i++ ) { %>
                 <% if (product.gallery.length > i) { %>

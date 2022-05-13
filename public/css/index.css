@@ -288,7 +288,7 @@
     position: relative;
 
 
-    display: none;
+    display: flex;
 }
     .productHero{
         display: flex;
@@ -380,7 +380,7 @@ footer{
             color: #0CB093;
         }
 
-@media(max-width: 414px) {
+@media screen and (max-width: 414px) {
 
     .logo{
         display: none;
@@ -396,6 +396,11 @@ footer{
 
     .profile p{
         display: none;
+    }
+
+    .products{
+        margin: 20px 16px;
+    
     }
     
     footer{
