@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
-    <link href="/css/formularios.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="/css/screenInfo.css" type="text/css">
-    <link rel="icon" href="/images/loguito.png">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/styles.css" rel="stylesheet" type="text/css">
+  <link href="/css/formularios.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/screenInfo.css" type="text/css">
+  <link href="/css/index.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="/images/loguito.png">
   <title>Registro</title>
 </head>
 
-<body>
-  
-  
+<body class="login_container">
+
   <header class="header">
-    <img src="images/MiEcommerce.svg" alt="logo" class="logo">
+    <img src="images/MiEcommerce.svg" alt="logo" class="logo_login">
   </header>
-  
+
   <div class="green_container"></div>
-  
+
   <div class="vertical_container">
     <!--cajita blanca que guarda el formulario-->
     <div class="form_container">
@@ -32,43 +32,43 @@
         <p>
           <input type="text" name="lastName" placeholder="Apellido" autocomplete="off">
         </p>
-          <p>
-            <input type="email" name="email" placeholder="Tu email" autocomplete="off">
-          </p>
-          <p>
-            <input type="password" name="password" placeholder="Tu nueva contraseña">
-          </p>
-          <p>
-            <input type="password" name="password-2" placeholder="Repite tu contraseña">
-          </p>
-          <!--IMPORTANTE CHEQUEAR REDIRECCION -->
-          
-          <input type="submit" class="login_button" value="Crear Cuenta">
-          
-          <!-- <button type="submit" class="login_button">Crear Cuenta</button> -->
-        </form>
-      </div>
-      <!--cierre de la cajita blanca que guarda el formulario-->
-      <div class="register_link">
-        <p>¿Ya tienes cuenta? <a href="login" class="registrate"> Inicia Sesión</a></p>
-      </div>
-      
+        <p>
+          <input type="email" name="email" placeholder="Tu email" autocomplete="off">
+        </p>
+        <p>
+          <input type="password" name="password" placeholder="Tu nueva contraseña">
+        </p>
+        <p>
+          <input type="password" name="password-2" placeholder="Repite tu contraseña">
+        </p>
+
+
+        <input type="submit" class="login_button" value="Crear Cuenta">
+
+        <!-- <button type="submit" class="login_button">Crear Cuenta</button> -->
+      </form>
     </div>
-    
-    <ul class="warning fail">
-      <% errors.forEach(error => { %>
-        <li >
-          <h3><%= error.msg %> </h3>
-        </li>
-        <% }) %>
-        
-      </ul>
-      <h3 class="warning success"><%= okMsg %> </h3>
-      
-      <footer>
-        <%- include('../partials/footer.ejs')  %> 
-      </footer>
-      
-    </body>
-  
-  </html>
+    <!--cierre de la cajita blanca que guarda el formulario-->
+    <div class="register_link">
+      <p>¿Ya tienes cuenta? <a href="login" class="registrate"> Inicia Sesión</a></p>
+    </div>
+
+  </div>
+
+  <ul class="warning fail">
+    <% errors.forEach(error => { %>
+    <li>
+      <h3><%= error.msg %> </h3>
+    </li>
+    <% }) %>
+
+  </ul>
+  <h3 class="warning success"><%= okMsg %> </h3>
+
+  <footer>
+    <%- include('../partials/footer.ejs')  %>
+  </footer>
+
+</body>
+
+</html>
