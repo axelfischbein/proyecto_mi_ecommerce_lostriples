@@ -280,6 +280,9 @@
     justify-content: space-evenly;
     background-color: var(--Primary);
     position: relative;
+
+
+    display: none;
 }
     .productHero{
         display: flex;
@@ -328,7 +331,7 @@
 
 footer{
     margin-top: 48px;
-    height: 65px;
+    padding: 23px 55px;
     border-top: 1px solid var(--grisClaro);
     display: flex;
     justify-content: space-around;
@@ -349,7 +352,6 @@ footer{
         align-items: center;
         gap: 25px;
     }
-    
     .stores-container{
         display: flex;
         gap: 15px;
@@ -371,3 +373,15 @@ footer{
         .playstore:hover{
             color: #0CB093;
         }
+
+@media screen and (max-width: 414px) {
+    footer{
+        padding: 23px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+        .copyright{
+            order: -1;
+        }
+
+}
