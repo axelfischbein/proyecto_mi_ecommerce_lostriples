@@ -10,6 +10,22 @@ header{
     padding: 5px;
 }
 
+.login_container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+.vertical_container{
+    display: flex;
+    top: 112px;
+    box-sizing: content-box;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-self: center;
+}
 
 .green_container{
     position: relative;
@@ -17,16 +33,18 @@ header{
     top: 64px;
     height: 264px;
     margin-bottom: 408px;
-    z-index: 0;
+    width: 100%;
 }
 
 .form_container{
     display: flex;
     position: relative;
+    flex-direction: column;
     background: var(--blanco);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
-    right:50%
+    width: 320px;
+    height: auto;
 }
 
 h2{
@@ -38,7 +56,6 @@ h2{
     height: 48px;
     width: 264px;
     top: calc(50% - 16px/2);
-
 }
 
 .form{
@@ -105,20 +122,20 @@ p>input{
     flex-wrap:wrap;
     line-height: 16px;
     font-size: 12px;
-    right: 50%;
-
 }
 
 .registrate{
     color:black;
 }
 
-.vertical_container{
-    display: flex;
-    margin-top: 48px;
-    box-sizing: content-box;
-    flex-direction: column;
-    position: absolute;
-    top: 65px;
-    left: 50%;
+@media (max-width: 700px){
+    .green_container{
+        margin-bottom: 380px;
+    }
+}
+
+@media (max-width: 414px){
+    .green_container{
+        margin-bottom: 350px;
+    }
 }
