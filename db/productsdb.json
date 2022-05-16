@@ -22,6 +22,7 @@
                 "src":"/images/productogenerico.svg",
                 "alt":"foto producto generico",
                 "puntos":"XX.XXX",
+                "gallery": [],
                 "mostwanted":false,
                 "suggested":false,
                 "stock":0,
