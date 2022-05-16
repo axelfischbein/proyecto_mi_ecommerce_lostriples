@@ -1,6 +1,7 @@
 .header{
     position: fixed;
     top: 0px;
+    left: 0px;
     width: 100%;
     backdrop-filter: blur(4px);
     background: rgba(255, 255, 255, 0.25);
@@ -10,7 +11,6 @@
     padding: 16px;
     z-index: 20;
     border-bottom: 1px solid var(--grisClaro);
-    max-width: 1500px;
     margin: auto auto;
 }
 
@@ -125,6 +125,9 @@
                 margin-top: 5px;
                 margin-bottom: 5px;
             }
+                .miniprofile > p:hover{
+                    text-shadow: 0px 0px 15px var(--Primary);
+                }
             .miniprofile > p:last-child{
                 display: flex;
                 justify-content: center;
@@ -188,6 +191,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+    max-width: 1500px;
 }
     .separador{
         width: 2px;
@@ -225,6 +229,8 @@
     font-size: 16px;
     line-height: 20px;
     color: var(--negro);
+
+    max-width: 1500px;
 }
     .product-list{
         margin-top: 24px;
@@ -296,6 +302,7 @@
                             line-height: 11px;
                         }
 #productHero_container{
+    position: relative;
     margin-top: 80px;
     width: 100%;
     height: 256px;
@@ -303,7 +310,7 @@
     align-items: flex-end;
     justify-content: space-evenly;
     background-color: var(--Primary);
-    position: relative;
+    
 }
     .productHero{
         display: flex;
@@ -395,6 +402,17 @@ footer{
             color: #0CB093;
         }
 
+@media screen and (min-width: 1700px) {
+    .categories{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .products{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media screen and (max-width: 414px) {
 
     .logo{
@@ -435,6 +453,7 @@ footer{
         width: 90%;
         flex-direction: column;
         align-items: flex-start;
+        min-width: 260px;
     }
         .separador{
             display: none;
@@ -455,10 +474,13 @@ footer{
         margin-top: 100px;
         flex-direction: column;
         align-items: center;
+        min-width: 300px;
+
     }
         .productHero{
             height: 194px;
             width: 90%;
+            min-width: 280px;
         }
         .productHero_banner{
             height: 194px;
@@ -487,6 +509,8 @@ footer{
 
     .products{
         margin: 100px 20px;
+        min-width: 280px;
+
     }
         .product-list{
             margin-top: 24px;
@@ -544,4 +568,63 @@ footer{
             .show{
                 right: 0;
             }
+}
+
+
+@media screen and (max-width: 1240px) and (min-width: 414px){
+    .categories{
+        margin: auto auto;
+        margin-top: -30px;
+        height: fit-content;
+        width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px
+    }
+        .separador{
+            display: none;
+        }
+        .categorie-item{
+            height: fit-content;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 13px;
+            overflow: visible;
+        }
+        .categorie-item > img{
+            width: 30px;
+            height: 30px;
+        }
+        #productHero_container{
+            margin-top: 200px;
+            margin-bottom: 200px;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+            .productHero{
+                height: fit-content;
+                width: 400px;
+            }
+            .productHero_logo{
+                bottom: -65px;
+            }
+            .productHero> div{
+                width: 100%;
+                height: 194px;
+            }
+            .productHero> div> div{
+                display: flex;
+                padding-right: 0;
+                z-index: 1;
+                margin: auto auto;
+                margin-bottom: 30px;
+                margin-left: 15px;
+                font-size: 15px;
+            }
+    .products{
+        margin: 3% 5%;
+        align-items: center;
+        justify-content: center;
+    }
 }
