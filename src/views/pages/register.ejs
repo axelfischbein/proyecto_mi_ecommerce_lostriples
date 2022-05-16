@@ -27,23 +27,22 @@
       <form action="/register" method="POST" class="form">
         <h2>¡Registrate!</h2>
         <p>
-          <input type="text" name="firstName" placeholder="Nombre" autocomplete="off">
+          <input class="regName" type="text" name="firstName" placeholder="Nombre" autocomplete="off">
         </p>
         <p>
-          <input type="text" name="lastName" placeholder="Apellido" autocomplete="off">
+          <input class="regLName" type="text" name="lastName" placeholder="Apellido" autocomplete="off">
         </p>
         <p>
-          <input type="email" name="email" placeholder="Tu email" autocomplete="off">
+          <input class="regEmail" type="email" name="email" placeholder="Tu email" autocomplete="off">
         </p>
         <p>
-          <input type="password" name="password" placeholder="Tu nueva contraseña">
+          <input class="regPass1" type="password" name="password" placeholder="Tu nueva contraseña">
         </p>
         <p>
-          <input type="password" name="password-2" placeholder="Repite tu contraseña">
+          <input class="regPass2" type="password" name="password-2" placeholder="Repite tu contraseña">
         </p>
 
-
-        <input type="submit" class="login_button" value="Crear Cuenta">
+        <input type="submit" class="login_button" value="Crear Cuenta" disabled>
 
         <!-- <button type="submit" class="login_button">Crear Cuenta</button> -->
       </form>
@@ -69,6 +68,7 @@
     <%- include('../partials/footer.ejs')  %>
   </footer>
 
+  <script src="js/registerScript.js"></script>
 </body>
 
 </html>

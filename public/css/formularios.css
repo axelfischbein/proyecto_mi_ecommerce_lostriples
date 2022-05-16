@@ -116,6 +116,11 @@ p>input{
     font-size: 13px;
 }
 
+.login_button:disabled{
+    background: var(--grisClaro);
+    color: #FFFF;
+}
+
 .register_link{
     position: relative;
     margin: auto;

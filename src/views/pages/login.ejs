@@ -28,12 +28,12 @@
       <form action="/login" method="post" class="form">
           <h2>¡Hola!</h2>
           <p>
-            <input type="name" name="email" placeholder="Tu email" autocomplete="off">
+            <input class="email" type="text" name="email" placeholder="Tu email" autocomplete="off">
           </p>
           <p>
-            <input type="password" name="password" placeholder="Tu contraseña">
+            <input class="password" type="password" name="password" placeholder="Tu contraseña">
           </p>
-          <button class="login_button">Iniciar Sesión</button>
+          <button class="login_button" disabled>Iniciar Sesión</button>
       </form>
     </div>
       <!--cierre de la cajita blanca que guarda el formulario-->
@@ -58,6 +58,7 @@
       <%- include('../partials/footer.ejs')  %> 
     </footer>
 
+    <script src="js/loginScript.js"></script>
 </body>
 
 </html>
