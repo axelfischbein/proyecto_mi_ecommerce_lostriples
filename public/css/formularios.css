@@ -3,30 +3,46 @@ header{
     background-color: #EFEFEF;
 }
 
-.logo{
+.logo_login{
     width: 136px;
     height: 32px;
     margin-left: 16px;
     padding: 5px;
 }
 
+.login_container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.vertical_container{
+    display: flex;
+    box-sizing: content-box;
+    flex-direction: column;
+    position: relative;
+    align-self: center;
+    bottom: 152px;
+}
 
 .green_container{
     position: relative;
     background: var(--Primary);
     top: 64px;
     height: 264px;
-    margin-bottom: 408px;
-    z-index: 0;
+    width: 100%;
+    
 }
 
 .form_container{
     display: flex;
     position: relative;
+    flex-direction: column;
     background: var(--blanco);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
-    right:50%
+    width: 320px;
+    height: auto;
 }
 
 h2{
@@ -38,7 +54,6 @@ h2{
     height: 48px;
     width: 264px;
     top: calc(50% - 16px/2);
-
 }
 
 .form{
@@ -105,20 +120,8 @@ p>input{
     flex-wrap:wrap;
     line-height: 16px;
     font-size: 12px;
-    right: 50%;
-
 }
 
 .registrate{
     color:black;
-}
-
-.vertical_container{
-    display: flex;
-    margin-top: 48px;
-    box-sizing: content-box;
-    flex-direction: column;
-    position: absolute;
-    top: 65px;
-    left: 50%;
 }
