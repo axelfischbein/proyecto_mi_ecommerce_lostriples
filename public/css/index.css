@@ -73,24 +73,41 @@
 
         cursor: pointer;
     }
-        .miniprofile{
+        .miniprofile-cont{
             position: fixed;
+            z-index: 999;
+            pointer-events: none;
+            top: 55px;
+            right: 16px;
+            width: 230px;
+            height: 262px;
+            overflow: hidden;
+        }
+        .miniprofile{
+            pointer-events: all;
+            position: relative;
             padding-bottom: 20px;
             padding-top: 16px;
             width: 210px;
             height: fit-content;
             background: #FFFFFF;
             border-radius: 16px;
-            z-index: 999;
-            top: 55px;
-            right: 16px;
+            z-index: 800;
+            top: -300px;
+            right: 0;
             box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+            margin: auto auto;
             
-            display: flex;
             display: none;
+            display: flex;
             flex-direction: column;
             justify-content: space-between;
+
+            transition: top linear .5s;
         }
+            .show{
+                top: 0;
+            }
             .miniprofile > .profile{
                 margin-left: 16px;
                 margin-bottom: 5px;
@@ -112,9 +129,14 @@
                 display: flex;
                 justify-content: center;
                 align-self: center;
-                gap: 8px;
-                margin-left: 10px;
+                justify-self: flex-end;
+                gap: 3px;
+                margin-left: 0px;
                 margin-bottom: 0px;
+            }
+            .miniprofile > p:last-child img{
+                margin-top: 3px;
+                align-self: center;
             }
             .divminprofile{
                 margin: 5px 0;
@@ -126,9 +148,6 @@
     .profile:hover{
         background: var(--Primary);
         border: 1px solid var(--Primary);
-    }
-    .profile:focus ~ .miniprofile{
-        display: flex;
     }
 
     .cart a{
@@ -497,18 +516,32 @@ footer{
                                 height: fit-content;
                             }
     
-        .miniprofile{
+        .miniprofile-cont{
             height: 100vh;
             top: 0;
             border-radius: 16px 0px 0px 16px;
             right: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .miniprofile{
+            border-radius: 16px 0px 0px 16px;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            right: -300px;
             justify-content: flex-start;
+
+            transition: right linear .5s;
         }
-        .miniprofile > .profile{
-            margin-left: 30px;
-        }
-        .miniprofile > .profile p{
-            margin-left: 10px;
-            display: flex;
-        }
+            .miniprofile > .profile{
+                margin-left: 30px;
+            }
+            .miniprofile > .profile p{
+                margin-left: 10px;
+                display: flex;
+            }
+            .show{
+                right: 0;
+            }
 }
