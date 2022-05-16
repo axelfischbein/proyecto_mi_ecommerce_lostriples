@@ -29,8 +29,6 @@ app.use('/', userRoutes);
 app.use('/api', apiRoutes);//api
 
 
-
-
 //404
 app.use((req,res,next)=>{
     res.status(404).render('pages/404page');
@@ -39,3 +37,4 @@ app.use((req,res,next)=>{
 
 //server
 app.listen(PORT, ()=>{});
+
