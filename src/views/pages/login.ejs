@@ -8,39 +8,40 @@
   <link href="/css/styles.css" rel="stylesheet" type="text/css">
   <link href="/css/formularios.css" rel="stylesheet" type="text/css">
   <link href="/css/screenInfo.css" rel="stylesheet" type="text/css">
+  <link href="/css/index.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="/images/loguito.png">
   <title>Login</title>
 </head>
 
-<body>
+<body class = "login_container">
 
-  
   <header class="header">
-    <img src="images/MiEcommerce.svg" alt="logo" class="logo">
+    <img src="images/MiEcommerce.svg" alt="logo" class="logo_login">
   </header>
   
+
   <div class="green_container"></div>
   
   <div class="vertical_container">
     <!--cajita blanca que guarda el formulario-->
     <div class="form_container">
       <form action="/login" method="post" class="form">
-        <h2>¡Inicia sesión!</h2>
-        <p>
+          <h2>¡Hola!</h2>
+          <p>
             <input type="name" name="email" placeholder="Tu email" autocomplete="off">
           </p>
           <p>
             <input type="password" name="password" placeholder="Tu contraseña">
           </p>
           <button class="login_button">Iniciar Sesión</button>
-        </form>
-      </div>
-      <!--cierre de la cajita blanca que guarda el formulario-->
-      <div class="register_link">
-        <p>¿No tienes cuenta? <a href="register" class="registrate"> Registrate</a></p>
-      </div>
-      
+      </form>
     </div>
+      <!--cierre de la cajita blanca que guarda el formulario-->
+    <div class="register_link">
+      <p>¿No tienes cuenta? <a href="register" class="registrate"> Registrate</a></p>
+    </div>
+      
+  </div>
     
     <ul class="warning fail">
       <% errors.forEach(error => { %>
@@ -53,7 +54,7 @@
       <% } %>
     </h3>
     
-    <footer>
+    <footer class="">
       <%- include('../partials/footer.ejs')  %> 
     </footer>
 

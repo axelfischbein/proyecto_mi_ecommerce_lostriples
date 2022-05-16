@@ -18,9 +18,7 @@
 
 body{
     background: #EFEFEF;
-}
-
-body.dark{
-    background: black;
+    width: 100%;
+    margin: auto auto;
 }
 
