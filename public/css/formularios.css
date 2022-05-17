@@ -3,6 +3,10 @@ header{
     background-color: #EFEFEF;
 }
 
+body.dark header{
+    background-color: var(--negro);
+}
+
 .logo_login{
     width: 136px;
     height: 32px;
@@ -45,6 +49,12 @@ header{
     height: auto;
 }
 
+body.dark .form_container{
+    background: var(--grisOscuro);
+    color: var(--blanco);
+}
+
+
 h2{
     display: inline;
     font-weight: 400;
@@ -70,6 +80,7 @@ h2:hover{
     gap: 10px;
 }
 
+
 form>p{
     border: solid rgba(0, 0, 0, 0.50) 1px;
     border-radius: 16px;
@@ -80,6 +91,17 @@ form>p{
     margin-bottom: 8px;
     padding-left: 12px;
     padding-top: 4px;
+}
+
+body.dark form>p{
+    border: solid var(--grisClaro) 1px;
+    background: var(--grisClaro);
+}
+
+body.dark form>input{
+
+    color: var(--grisClaro);
+    
 }
 
 p>input{
@@ -104,6 +126,12 @@ p>input{
     transition: all 300ms ease;
 }
 
+body.dark .login_button{
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+
 .login_button a{
     color:rgb(94%, 94%, 94%);
     text-decoration: none;
@@ -121,6 +149,11 @@ p>input{
     color: #FFFF;
 }
 
+body.dark .login_button:disabled{
+    background: var(--negro);
+    color: #FFFF;
+}
+
 .register_link{
     position: relative;
     margin: auto;
@@ -132,8 +165,16 @@ p>input{
     font-size: 12px;
 }
 
+body.dark .register_link{
+    color: #FFFF;
+}
+
 .registrate{
     color:rgb(0, 0, 0);
+}
+
+body.dark .registrate{
+    color: var(--blanco);
 }
 
 .registrate:hover{
@@ -149,6 +190,12 @@ p>input{
     margin-left: 5px;
     font-size: 11px;
 }
+
+body.dark .invalid{
+
+    color: var(--blanco);
+}
+
     .regnamev{
         display: flex;
     }
@@ -164,7 +211,6 @@ p>input{
     .regPass2{
         display: flex;
     }
-
 
 
 @media (max-width: 414px){
