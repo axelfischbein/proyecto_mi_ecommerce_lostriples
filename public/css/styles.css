@@ -14,11 +14,17 @@
     --grisOscuro: #494F51;
     --Primary: #0CB093;
     --categories: #333333;
+    --rosa: palevioletred;
 }
 
 body{
-    background: #EFEFEF;
+    background: var(--blanco);
     width: 100%;
     margin: auto auto;
 }
 
+body.dark{
+    background: var(--negro);
+    width: 100%;
+    margin: auto auto;
+}

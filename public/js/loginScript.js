@@ -1,4 +1,6 @@
 window.addEventListener('load', ()=>{
+    let dark = localStorage.getItem("botonSwitch");
+    if(dark) document.body.classList.add('dark');
     let email = localStorage.getItem("email");
     let checkValidation = false;
     
