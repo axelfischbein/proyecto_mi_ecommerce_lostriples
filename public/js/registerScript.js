@@ -1,3 +1,4 @@
+
 let ableRegister = () =>{
     let regName = document.querySelector('.regName').value;
     let regLName = document.querySelector('.regLName').value;
