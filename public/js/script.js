@@ -15,7 +15,12 @@ window.addEventListener("load",()=>{
     //     // }
     // });
     
-   
+    const botonSwitch = document.querySelector('#switch');
+    
+    botonSwitch.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        localStorage.setItem("botonSwitch", dark);
+    });
     
     
 

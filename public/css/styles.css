@@ -17,8 +17,17 @@
 }
 
 body{
-    background: #EFEFEF;
+    background: var(--blanco);
     width: 100%;
     margin: auto auto;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
 }
 
+body.dark{
+    background: var(--negro);
+    width: 100%;
+    margin: auto auto;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+}
