@@ -52,6 +52,16 @@
             border: none;
             outline: none;
         }
+
+        body.dark input{
+            background-color: var(--grisClaro);
+            color: var(--blanco);
+        }
+
+        body.dark .search input{
+            background-color: var(--grisOscuro);
+            color: var(--blanco);
+        }
         
         .search button{
             width: 16px;
@@ -121,7 +131,7 @@
         }
         body.dark .miniprofile{
             background: var(--grisOscuro);
-            box-shadow: 0px 4px 8px 0px var(--grisClaro);
+            box-shadow: 0px 4px 8px 0px var(--negro);
         }
 
             .show{

@@ -4,7 +4,7 @@ window.addEventListener('load', ()=>{
     let email = localStorage.getItem("email");
     let checkValidation = false;
     
-    if(localStorage.length != 0){
+    if(email){
         document.querySelector('.email').value = email;
         document.querySelector('.check').checked = true;
         checkValidation = true;
