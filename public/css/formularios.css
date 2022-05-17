@@ -67,7 +67,7 @@ h2:hover{
     display: flex;
     flex-direction: column;
     padding: 48px 32px 48px 32px;
-    gap: 8px;
+    gap: 10px;
 }
 
 form>p{
@@ -136,6 +136,31 @@ p>input{
     cursor: pointer;
     font-size: 13px;
 }
+.invalid{
+    position: relative;
+    top: -15px;
+    color: grey;
+    margin-bottom: -20px;
+    margin-left: 5px;
+    font-size: 11px;
+}
+    .regnamev{
+        display: flex;
+    }
+    .reglnamev{
+        display: flex;
+    }
+    .regemailv{
+        display: flex;
+    }
+    .regpass1v{
+        display: flex;
+    }
+    .regPass2{
+        display: flex;
+    }
+
+
 
 @media (max-width: 414px){
     .form_footer{

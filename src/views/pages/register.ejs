@@ -27,20 +27,36 @@
       <form action="/register" method="POST" class="form">
         <h2>¡Registrate!</h2>
         <p>
-          <input type="text" name="firstName" placeholder="Nombre" autocomplete="off">
+          <input id="regName" type="text" name="firstName" placeholder="Nombre" autocomplete="off">
+          
         </p>
+        <div class="invalid regnamev">
+          <p> El nombre es requerido </p>
+        </div>
         <p>
-          <input type="text" name="lastName" placeholder="Apellido" autocomplete="off">
+          <input id="regLName" type="text" name="lastName" placeholder="Apellido" autocomplete="off">
         </p>
+        <div class="invalid reglnamev">
+          <p> El apellido es requerido </p>
+        </div>
         <p>
-          <input type="email" name="email" placeholder="Tu email" autocomplete="off">
+          <input id="regEmail" type="email" name="email" placeholder="Tu email" autocomplete="off">
         </p>
+        <div class="invalid regemailv">
+          <p> El email es requerido </p>
+        </div>
         <p>
-          <input type="password" name="password" placeholder="Tu nueva contraseña">
+          <input id="regPass1" type="password" name="password" placeholder="Tu nueva contraseña">
         </p>
+        <div class="invalid regpass1v">
+          <p> La contraseña es requerida </p>
+        </div>
         <p>
-          <input type="password" name="password-2" placeholder="Repite tu contraseña">
+          <input id="regPass2" type="password" name="password-2" placeholder="Repite tu contraseña">
         </p>
+        <div class="invalid regpass2v">
+          <p> Las contraseñas deben coincidir </p>
+        </div>
 
 
         <input type="submit" class="login_button" value="Crear Cuenta">
@@ -69,6 +85,7 @@
     <%- include('../partials/footer.ejs')  %>
   </footer>
 
+  <script src="js/registerScript.js"></script>
 </body>
 
 </html>
