@@ -685,3 +685,7 @@ footer{
         justify-content: center;
     }
 }
+
+body.dark .miniprofile{
+ color: var(--blanco);
+}
