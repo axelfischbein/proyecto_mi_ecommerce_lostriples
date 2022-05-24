@@ -4,13 +4,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
     .top_container{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        width: 1024px;
+        width: 70%;
     }
 
     .bottom_container{
@@ -18,7 +19,7 @@
         flex-direction: column;
         align-items: flex-end;
         gap: 22px;
-        width: 1024px;
+        width: 70%;
         padding-bottom: 140px;
         font-size: 24px;
         line-height: 33px;
@@ -47,7 +48,7 @@ span b{
 }
 
 .btn_pagar{
-    padding: 8px 28px;
+    padding: 8px 20px;
     width: 110px;
     height: 32px;
     background: var(--grisOscuro);
@@ -65,10 +66,11 @@ span b{
 .btn_pagar:hover{
     background: var(--Primary);
     transition: all 300ms ease;
+    font-size: 13px;
 }
 
 .cartitems_container{
-    width: 1024px;
+    width: 70%;
 }
 .product-list{
     width: 100%;
@@ -94,9 +96,14 @@ span b{
     justify-content: space-between;
     align-items: center;
 }
+
+body.dark .cart_item{
+    background: var(--grisOscuro);
+}
     .cart_item:hover{
         outline: 2px solid #0CB093;
     }
+
     .cart_desc{
         min-width: 280px;
         display: flex;
@@ -111,15 +118,18 @@ span b{
         display: flex;
         align-items: center;
     }
+
         .cart_desc img{
             width: 64px;
             height: 64px;
         }
+
     .cart_opt{
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
         .cart_opt a{
             width: 78px;
             height: 32px;
@@ -138,11 +148,18 @@ span b{
             align-items: center;
             justify-content: center;
         }
+
+        body.dark .cart_opt a{
+            background-color: var(--categories);
+            border: 1px solid var(--blanco);
+            color: var(--blanco);
+        }
             
             .cart_opt a:hover{
                 background-color: #0CB093;
                 font-size: 13px;
             }
+
         .agregar-quitar{
             margin-left: 16px;
             margin-right: 26px;
@@ -163,6 +180,13 @@ span b{
             line-height: 16px;
             color: #000000;
         }
+
+        body.dark .agregar-quitar{
+            background-color: var(--categories);
+            border: 1px solid var(--blanco);
+            color: var(--blanco);
+        }
+
             .agregar-quitar p{
                 width: 20px;
                 height: 20px;
@@ -177,6 +201,7 @@ span b{
                     color: #0CB093;
                     font-size: 14px;
                 }
+
         .cart_opt > p{
             width: 78px;
             font-style: normal;
@@ -186,3 +211,130 @@ span b{
             text-align: right;
             color: #000000;
         }
+
+        body.dark .cart_opt > p{
+            color: var(--blanco);
+        }
+
+/* CARLA */
+.modal_container{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.modal_error{
+    position: relative;
+    display: flex;
+    height: 135px;
+    width: 400px;
+    flex-direction: column;
+    background: var(--blanco);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 15px;
+}
+
+
+.text_e{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3px;
+}
+
+.att_msg_e{
+    display: flex;
+    align-items: center;
+}
+
+.incorrect_e{
+    font-weight: bold;
+}
+
+.button_e{
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.aceptar{
+    width: 120px;
+    height: 32px;
+    background: var(--Primary);
+    border-radius: 16px;
+    color: rgb(94%, 94%, 94%);
+    gap: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    border-style: inherit;
+    transition: all 300ms ease;   
+}
+
+.aceptar:hover{
+    background: var(--grisOscuro);
+    transition: all 300ms ease;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
+/* CARLA */
+        
+@media (max-width: 414px){
+
+    .container_main{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .top_container{
+        width: 100%;
+    }
+
+    .bottom_container{
+        width: 100%;
+    }
+
+    .cartitems_container{
+        width: 100%;
+    }
+
+    .cart_item{
+        width: 100%;
+        height: auto;
+        padding-left: 8px;
+        padding-right: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .cart_desc{
+        width: 100%;
+    }
+
+    .cart_opt{
+        align-self: flex-end;
+        width: 75%;
+    }
+    
+}
+
+body.dark .container_main{
+color: var(--blanco)
+}

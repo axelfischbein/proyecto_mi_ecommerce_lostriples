@@ -13,7 +13,7 @@
 <body>
     <% let totalPrice = 0 %> 
     <% cartdb.cartItems.forEach(item => { %>
-        <% totalPrice += item.price  %>
+        <% totalPrice += (item.price * item.cant) %>
     <% }) %>
 
     <header>
@@ -33,7 +33,7 @@
 
         <section class="bottom_container">
             <span>Total de puntos: <b> <%= totalPrice %>  </b></span>
-            <button class="btn_pagar">Ir a pagar</button>
+            <button id="pagar" class="btn_pagar">Ir a pagar</button>
         </section>
 
    </div>
@@ -42,6 +42,21 @@
     <footer>
         <%- include('../partials/footer.ejs')  %> 
     </footer>
+
+    <!-- CARLA -->
+    <div class="modal_container">
+        <div class="modal_error">
+            <h3>¡Ups! Lo sentimos.</h3>
+            <section class="text_e">
+                <p class="att_msg_e">Esta página aún no fue</p><p class="incorrect_e"><em>implementada.</em></p>
+            </section>
+            <div class="button_e"> 
+                <button class="aceptar">Aceptar</button>
+            </div> 
+        </div>
+    </div>
+      <!-- CARLA -->
    
+    <script src="/js/cartScript.js"></script>
 </body>
 </html>

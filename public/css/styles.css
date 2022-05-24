@@ -8,18 +8,23 @@
 }
 
 :root{
-    --negro: black;
+    --negro: #222222;
     --blanco: white;
     --grisClaro: #999999;
     --grisOscuro: #494F51;
     --Primary: #0CB093;
     --categories: #333333;
+    --rosa: palevioletred;
 }
 
 body{
     background: #EFEFEF;
     width: 100%;
-    max-width: 1500px;
     margin: auto auto;
 }
 
+body.dark{
+    background: var(--negro);
+    width: 100%;
+    margin: auto auto;
+}

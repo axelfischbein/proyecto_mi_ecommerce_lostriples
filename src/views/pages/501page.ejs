@@ -7,6 +7,8 @@
     <link rel="icon" href="/images/loguito.png">
     <link rel="stylesheet" href="/css/errores.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/formularios.css">
     <title>MiEcommerce</title>
 </head>
 <body>
@@ -14,11 +16,14 @@
         <header>
             <%- include('../partials/header.ejs')  %>
         </header>
-        <div class="main_container_error">
-            <div class="container_dos">
+
+        <div class="green_container"></div>
+
+        <div class="vertical_container">
+            <div class="red_container">
                 <img src="https://www.pngplay.com/wp-content/uploads/12/Sad-Emoji-No-Background.png" alt="carita triste"
                     class="sad_face">
-                <div class="error_container">
+                <div class="msg_container">
                     <h1>501 Not Implemented</h1>
                     <p>¡Ups! Lo sentimos. El servidor no reconoce el método de petición, o carece de la capacidad para cumplirla. Vamos a buscar un lugar mejor para vos.</p>
                 </div>
@@ -26,7 +31,7 @@
             </div>
             <button class="btn_index"><a href="/" class="inicio">Inicio de MiEcommerce</a></button>
         </div>
-        <footer>
+        <footer class="error_footer">
             <%- include('../partials/footer.ejs')  %>
         </footer>
 
