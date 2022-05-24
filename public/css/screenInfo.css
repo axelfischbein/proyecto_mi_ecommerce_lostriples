@@ -1,13 +1,10 @@
 .warning{
-    /* position: fixed; */
+    position: fixed;
     bottom: 0;
     z-index: 999;
     width: 100%;
     text-align: center;
-    
     list-style: none;
-
-    
 }
 
 .fail{
@@ -18,4 +15,66 @@
 .success{
     background-color: rgb(194, 247, 194);
     color: rgb(29, 240, 29);
+}
+
+.modal_container_l{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_login{
+    position: relative;
+    display: flex;
+    height: 135px;
+    width: 400px;
+    flex-direction: column;
+    background: var(--blanco);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 15px;
+}
+
+.modal_text{
+    text-align: center;
+    list-style: none;
+}
+
+.incorrect_modal{
+    font-weight: bold;
+}
+
+.button_modal{
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.close{
+    width: 120px;
+    height: 32px;
+    background: var(--Primary);
+    border-radius: 16px;
+    color: rgb(94%, 94%, 94%);
+    gap: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    border-style: inherit;
+    transition: all 300ms ease;
+}
+
+.close:hover{
+    background: var(--grisOscuro);
+    transition: all 300ms ease;
+    cursor: pointer;
+    font-size: 13px;
 }

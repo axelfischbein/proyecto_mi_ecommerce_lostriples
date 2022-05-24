@@ -3,7 +3,12 @@ window.addEventListener('load', ()=>{
     if(dark) document.body.classList.add('dark');
     let email = localStorage.getItem("email");
     let checkValidation = false;
+    let cerrar = document.querySelector(".close");
+    let modalContainerL = document.querySelector(".modal_container_l");
+
     
+   
+
     if(email){
         document.querySelector('.email').value = email;
         document.querySelector('.check').checked = true;
@@ -15,7 +20,7 @@ window.addEventListener('load', ()=>{
         let password = document.querySelector('.password').value;
         let validate = 0;
     
-        if(name == '' || password ==''){
+        if(name.trim()  == '' || password.trim() ==''){
             validate ++;
         }
     
@@ -23,7 +28,7 @@ window.addEventListener('load', ()=>{
         document.querySelector('.login_button').disabled = true;
     
     }
-    
+
     document.querySelector('.email').addEventListener('keyup', ableLogin);
     document.querySelector('.password').addEventListener('keyup', ableLogin);
     
@@ -45,6 +50,12 @@ window.addEventListener('load', ()=>{
             localStorage.removeItem("email");
         }
     })
+
+    cerrar.addEventListener("click",()=> {
+        modalContainerL.style.opacity = "0";
+        modalContainerL.style.visibility = "hidden";
+    });
+
     
 })
 
