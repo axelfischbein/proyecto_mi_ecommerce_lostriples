@@ -83,8 +83,15 @@ const controller = {
                 return res.send(product);
             }
         });
+        return res.send("no se ha encontrado");
         
     },
+
+    getAllProducts: (req, res) => {
+        res.set('Access-Control-Allow-Origin', '*');
+        return res.send(products);
+    },
+
     getCategories: (req,res) => {
 
         return res.send(productsdb.categories);

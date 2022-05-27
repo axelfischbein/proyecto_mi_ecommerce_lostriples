@@ -13,6 +13,7 @@ window.addEventListener("load",()=>{
 
     //session
     localStorage.setItem("session","usuario1");
+
     let session = localStorage.getItem("session");
     if(session){
         document.querySelector(".profile").classList.add("prof");

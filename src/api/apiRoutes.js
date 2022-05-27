@@ -2,9 +2,10 @@
 const express = require('express');
 const router = express.Router();
 //controllers
-const {getProducts,getMostWantedProducts, getSuggested,getCategories,quitarProductoDelCarrito,getCart,agregarProductoDelCarrito} = require('./apiController');
+const {getAllProducts, getProducts, getMostWantedProducts, getSuggested,getCategories,quitarProductoDelCarrito,getCart,agregarProductoDelCarrito} = require('./apiController');
 
 //rutas
+router.get('/allproducts', getAllProducts);
 router.get('/products/:_id', getProducts);
 router.get('/mostmostWanted/:id?', getMostWantedProducts);
 router.get('/suggested/:id?', getSuggested);
