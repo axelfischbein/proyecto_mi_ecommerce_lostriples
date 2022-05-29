@@ -5,6 +5,7 @@ window.addEventListener("load",()=>{
 
     //profile
     document.querySelector(".profile").addEventListener("click", (e)=>{
+        console.log("f");
         document.querySelector(".miniprofile").classList.toggle("show");
     })
     document.addEventListener("click", (e)=>{

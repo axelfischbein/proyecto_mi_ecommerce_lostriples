@@ -8,7 +8,7 @@
 }
 
 :root{
-    --negro: black;
+    --negro: #222222;
     --blanco: white;
     --grisClaro: #999999;
     --grisOscuro: #494F51;
@@ -18,7 +18,7 @@
 }
 
 body{
-    background: var(--blanco);
+    background: #EFEFEF;
     width: 100%;
     margin: auto auto;
 }

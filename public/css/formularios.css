@@ -202,7 +202,7 @@ body.dark .registrate{
 body.dark .invalid{
 
     color: var(--blanco);
-}
+    }
 
     .regnamev{
         display: flex;
@@ -219,7 +219,6 @@ body.dark .invalid{
     .regPass2{
         display: flex;
     }
-
 
 @media (max-width: 414px){
     .form_footer{

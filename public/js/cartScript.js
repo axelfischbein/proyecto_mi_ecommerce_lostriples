@@ -19,3 +19,17 @@ window.addEventListener('load', ()=>{
 
     });
 });
+
+let abrir = document.querySelector(".btn_pagar");
+let cerrar = document.querySelector(".aceptar");
+let modalContainer = document.querySelector(".modal_container")
+
+abrir.addEventListener("click", ()=> {
+    modalContainer.style.opacity = "1";
+    modalContainer.style.visibility = "visible";
+})
+
+cerrar.addEventListener("click", ()=> {
+    modalContainer.style.opacity = "0";
+    modalContainer.style.visibility = "hidden";
+})
