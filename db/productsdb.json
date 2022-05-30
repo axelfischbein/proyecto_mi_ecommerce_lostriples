@@ -22,11 +22,11 @@
                 "src":"http://localhost:3030/images/productogenerico.svg",
                 "alt":"foto producto generico",
                 "puntos":"XX.XXX",
-                "gallery": [],
+                "gallery": ["http://localhost:3030/images/productogenerico.svg"],
                 "mostwanted":false,
                 "suggested":false,
                 "stock":0,
-                "store":null,
+                "store":"http://localhost:3030/images/profile_pic.svg",
                 "__v":0
             },
             {
@@ -41,7 +41,7 @@
                 "mostwanted":false,
                 "suggested":false,
                 "stock":0,
-                "store":null,
+                "store":"http://localhost:3030/images/profile_pic.svg",
                 "__v":0
             },
             {
@@ -52,11 +52,11 @@
                 "src":"https://tienda.havanna.com.ar/wp-content/uploads/2020/04/alfajorChocolatex12.jpg",
                 "alt":"foto Alfajores Chocolate",
                 "puntos":16000,
-                "gallery":[],
+                "gallery":["https://tienda.havanna.com.ar/wp-content/uploads/2020/04/alfajorChocolatex12.jpg"],
                 "mostwanted":false,
                 "suggested":false,
                 "stock":0,
-                "store":null,
+                "store":"http://localhost:3030/images/profile_pic.svg",
                 "__v":0
             },
             {
@@ -67,11 +67,11 @@
                 "src":"https://http2.mlstatic.com/D_NQ_NP_620605-MLA32691559317_102019-O.webp",
                 "alt":"foto Chromecast",
                 "puntos":56900,
-                "gallery":[],
+                "gallery":["https://http2.mlstatic.com/D_NQ_NP_620605-MLA32691559317_102019-O.webp"],
                 "mostwanted":false,
                 "suggested":false,
                 "stock":0,
-                "store":null,
+                "store":"http://localhost:3030/images/profile_pic.svg",
                 "__v":0
             },
             {
@@ -82,10 +82,11 @@
                 "src":"https://http2.mlstatic.com/D_NQ_NP_722848-MLA44347938024_122020-O.webp",
                 "alt":"foto Xiaomi Redmi Airdots",
                 "puntos":38490,
-                "gallery":[],
+                "gallery":["https://http2.mlstatic.com/D_NQ_NP_722848-MLA44347938024_122020-O.webp"],
                 "mostwanted":false,
                 "suggested":false,
-                "stock":0,"store":null,
+                "stock":0,
+                "store":"http://localhost:3030/images/profile_pic.svg",
                 "__v":0
             },
             {
@@ -96,11 +97,11 @@
                 "src":"https://http2.mlstatic.com/D_NQ_NP_721107-MLA46494004111_062021-O.webp",
                 "alt":"foto kit teclado mouse",
                 "puntos":11700,
-                "gallery":[],
+                "gallery":["https://http2.mlstatic.com/D_NQ_NP_721107-MLA46494004111_062021-O.webp"],
                 "mostwanted":false,
                 "suggested":false,
                 "stock":0,
-                "store":null
+                "store":"http://localhost:3030/images/profile_pic.svg"
             },
             {
                 "_id":"7",
@@ -110,11 +111,11 @@
                 "src":"https://http2.mlstatic.com/D_NQ_NP_976630-MLA44284500562_122020-O.webp",
                 "alt":"foto champagne",
                 "puntos":98543,
-                "gallery":[],
+                "gallery":["https://http2.mlstatic.com/D_NQ_NP_976630-MLA44284500562_122020-O.webp"],
                 "mostwanted":false,
                 "suggested":false,
                 "stock":0,
-                "store":null
+                "store":"http://localhost:3030/images/profile_pic.svg"
             },
             {
                 "_id":"8",
@@ -128,7 +129,7 @@
                 "mostwanted":false,
                 "suggested":false,
                 "stock":0,
-                "store":null
+                "store":"http://localhost:3030/images/profile_pic.svg"
             },
             {
                 "_id":"9",
@@ -168,11 +169,11 @@
                 "src":"http://localhost:3030/images/jackdaniels.svg",
                 "alt":"foto jack daniels",
                 "puntos":19000,
-                "gallery":["/images/jackdaniels.svg","/images/jackdaniels_2.svg","/images/jackdaniels_3.svg"],
+                "gallery":["http://localhost:3030/images/jackdaniels.svg","http://localhost:3030/images/jackdaniels_2.svg","http://localhost:3030/images/jackdaniels_3.svg"],
                 "mostwanted":false,
                 "suggested":true,
                 "stock":0,
-                "store":null,
+                "store":"http://localhost:3030/images/profile_pic.svg",
                 "__v":0
             },
             {
@@ -183,11 +184,11 @@
                 "src":"http://localhost:3030/images/cocacola.svg",
                 "alt":"foto cocacola",
                 "puntos":760,
-                "gallery":[],
+                "gallery":["http://localhost:3030/images/cocacola.svg"],
                 "mostwanted":true,
                 "suggested":false,
                 "stock":0,
-                "store":null,
+                "store":"http://localhost:3030/images/profile_pic.svg",
                 "__v":0
             },
             {
@@ -199,11 +200,11 @@
                 "src":"http://localhost:3030/images/hamburguesa_cartitem.svg",
                 "alt":"icono combo hamburguesa",
                 "puntos":5000,
-                "gallery": [],
+                "gallery": ["http://localhost:3030/images/hamburguesa_cartitem.svg"],
                 "mostwanted":true,
                 "suggested":false,
                 "stock":0,
-                "store":null,
+                "store":"http://localhost:3030/images/profile_pic.svg",
                 "__v":0
             }
         ]
