@@ -92,6 +92,80 @@ const controller = {
         return res.send(products);
     },
 
+    editProduct: (req, res) => {
+        const {_id} = req.params;
+        const {nombre, puntos, stock, description, store, gallery} = req.body;
+        let newProducts = products;
+        let newProduct = {};
+        newProducts.forEach(product => {
+            if(product._id == _id) {
+                newProduct = {
+                    "_id": _id,
+                    "category":product.category,
+                    "nombre":nombre,
+                    "description":description,
+                    "src":gallery[0],
+                    "alt":nombre,
+                    "puntos": puntos,
+                    "gallery": gallery,
+                    "mostwanted": product.mostwanted,
+                    "suggested": product.suggested,
+                    "stock": stock,
+                    "store": store,
+                    "__v": product.__v
+                };
+            }
+        });
+        newProducts = newProducts.filter(product => product._id != _id);
+        newProducts.push(newProduct);
+        newProducts.sort(function (a, b) {
+            if (parseInt(a._id) > parseInt(b._id)) {
+              return 1;
+            }
+            if (parseInt(a._id) < parseInt(b._id)) {
+              return -1;
+            }
+            // a must be equal to b
+            return 0;
+          });
+        fs.writeFileSync("./db/productsdb.json",JSON.stringify(newProducts));
+        return res.send(newProducts);
+    },
+
+    newProduct: (req, res) => {
+        const _id = products.length + 1;
+        const {nombre, puntos, stock, description, store, gallery} = req.body;
+        let newProducts = products;
+        let newProduct = {
+            "_id": _id,
+            "category":"Otros",
+            "nombre":nombre,
+            "description":description,
+            "src":gallery[0],
+            "alt":nombre,
+            "puntos": puntos,
+            "gallery": gallery,
+            "mostwanted": false,
+            "suggested": false,
+            "stock": stock,
+            "store": store,
+            "__v": 0
+        };
+        newProducts.push(newProduct);
+        newProducts.sort(function (a, b) {
+            if (parseInt(a._id) > parseInt(b._id)) {
+              return 1;
+            }
+            if (parseInt(a._id) < parseInt(b._id)) {
+              return -1;
+            }
+            // a must be equal to b
+            return 0;
+          });
+        fs.writeFileSync("./db/productsdb.json",JSON.stringify(newProducts));
+        return res.send(newProducts);
+    },
+
     getCategories: (req,res) => {
 
         return res.send(productsdb.categories);
