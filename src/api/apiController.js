@@ -93,6 +93,7 @@ const controller = {
     },
 
     editProduct: (req, res) => {
+        res.set('Access-Control-Allow-Origin', '*');
         const {_id} = req.params;
         const {nombre, puntos, stock, description, store, gallery} = req.body;
         let newProducts = products;
@@ -133,6 +134,7 @@ const controller = {
     },
 
     newProduct: (req, res) => {
+        res.set('Access-Control-Allow-Origin', '*');
         const _id = products.length + 1;
         const {nombre, puntos, stock, description, store, gallery} = req.body;
         let newProducts = products;
