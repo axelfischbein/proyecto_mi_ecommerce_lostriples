@@ -1,4 +1,5 @@
 const productsdb = require("../../db/productsdb.json");
+const oldproductsdb = require("../../db/oldproductsdb.json");
 const cartdb = require("../../db/cartdb.json");
 const products = productsdb.productos;
 const cartItems = cartdb.cartItems;
@@ -72,7 +73,7 @@ const controller = {
         
         fs.writeFileSync("./db/cartdb.json",JSON.stringify(newCartdb));
 
-        return res.send(newCartItems);
+        return res.send(productsdb);
     },
 
     getProducts: (req, res) => {
@@ -93,11 +94,14 @@ const controller = {
     },
 
     editProduct: (req, res) => {
-        res.set('Access-Control-Allow-Origin', '*');
+        
         const {_id} = req.params;
         const {nombre, puntos, stock, description, store, gallery} = req.body;
+        
+        let newProductsDb = productsdb;        
         let newProducts = products;
         let newProduct = {};
+        
         newProducts.forEach(product => {
             if(product._id == _id) {
                 newProduct = {
@@ -117,8 +121,10 @@ const controller = {
                 };
             }
         });
+
         newProducts = newProducts.filter(product => product._id != _id);
         newProducts.push(newProduct);
+
         newProducts.sort(function (a, b) {
             if (parseInt(a._id) > parseInt(b._id)) {
               return 1;
@@ -128,16 +134,22 @@ const controller = {
             }
             // a must be equal to b
             return 0;
-          });
-        fs.writeFileSync("./db/productsdb.json",JSON.stringify(newProducts));
-        return res.send(newProducts);
+        });
+
+        newProductsDb.productos = newProducts;
+
+        fs.writeFileSync("./db/productsdb.json",JSON.stringify(newProductsDb));
+        res.send(newProductsDb);
     },
 
     newProduct: (req, res) => {
-        res.set('Access-Control-Allow-Origin', '*');
+
         const _id = products.length + 1;
         const {nombre, puntos, stock, description, store, gallery} = req.body;
+        
+        let newProductsDb = productsdb;        
         let newProducts = products;
+        
         let newProduct = {
             "_id": _id,
             "category":"Otros",
@@ -153,6 +165,7 @@ const controller = {
             "store": store,
             "__v": 0
         };
+        
         newProducts.push(newProduct);
         newProducts.sort(function (a, b) {
             if (parseInt(a._id) > parseInt(b._id)) {
@@ -163,9 +176,17 @@ const controller = {
             }
             // a must be equal to b
             return 0;
-          });
-        fs.writeFileSync("./db/productsdb.json",JSON.stringify(newProducts));
-        return res.send(newProducts);
+        });
+
+        newProductsDb.productos = newProducts;
+
+        fs.writeFileSync("./db/productsdb.json",JSON.stringify(newProductsDb));
+        return res.send(newProductsDb);
+    },
+
+    reiniciarProductos: (req, res) => {
+        fs.writeFileSync("./db/productsdb.json",JSON.stringify(oldproductsdb));
+        return res.send(oldproductsdb);
     },
 
     getCategories: (req,res) => {

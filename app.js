@@ -1,5 +1,6 @@
 //dependencias
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 3030;
@@ -20,6 +21,7 @@ app.set('views','./src/views');
 app.use(express.static(path.join(__dirname,"./public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 //rutas
 app.use('/', homeRoutes);
